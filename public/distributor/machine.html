@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from shinepay.io/distributor/machine.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:18:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>ShineInsights</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+       <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
+    <link rel="stylesheet" type="text/css" href="../../cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+    
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper">
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a href="index.html" class="navbar-brand"></a>
+          </div>
+          <div class="be-right-navbar">
+            <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name"></span></a>
+                <div role="menu" class="dropdown-menu">     
+                  <div class="user-info">
+                    <div class="user-name"></div>
+                    
+                  </div>
+                  <a href="account.html" class="dropdown-item"><span class="icon fal fa-usd-square"></span> Account</a>
+                  <a onClick="signOut()" class="dropdown-item"><span class="icon mdi mdi-power"></span> Logout</a>
+                </div>
+              </li>
+            </ul>
+            <!-- <div class="page-title"><span>Manage Machines</span></div> -->
+            <ul class="nav navbar-nav float-right be-icons-nav">
+
+              
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon fas fa-th"></i></a>
+                <ul class="dropdown-menu be-connections">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        
+                          <div class="col"><a href="#" ><span>ShineInsights</span></a></div>
+                          <div class="col"><a href="operatorhome.html" ><span>ShineDistributor</span></a></div>
+                          
+                          <div class="col"><a href="#"><span>Help Center</span></a></div>
+                          
+                        
+                      </div>
+                    </div>
+                    
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">ShineInsights</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements">
+                  <!-- <li class="divider">Menu</li> -->
+                 
+          
+         <li><a href="operatorhome.html"><i class="icon fal fa-wrench"></i><span>Installations</span></a>
+                  </li>                  
+                  <li><a href="techhome.html"><i class="icon fal fa-user-shield"></i><span>Techs</span></a>
+                  </li>
+                  <li><a href="account.html"><i class="icon fal fa-cog"></i><span>Account</span></a>
+                  </li>
+
+
+
+
+
+     
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="be-content">
+        <div class="page-head">
+          <h2 id="machineTitleLabelID" class="page-head-title"></h2>
+          <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb page-head-nav">
+              <li class="breadcrumb-item"><a href="../managemachines.html">Manage Machines</a></li>
+              <li id="machineIDBreadcrumb" class="breadcrumb-item"><a href="../machine.html"></a></li>
+
+            </ol>
+          </nav>
+
+        </div>
+
+              <div id="loadingCard"  class="main-content container-fluid be-loading">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header card-header">Machine Info<span class="card-subtitle"></span></div>
+                <div class="card-body">
+              
+
+                <div class="card-body">
+                 <label for="inputText3" class="col-lg-6 col-form-label text-sm-left">Location</label>
+                        <!-- <div class="col-12 col-sm-8 col-lg-3"> -->
+                      <div class="col-12 col-sm-8 col-lg-6">
+                        <select  onchange="newLocationSelectedHandler(this)" id="locationSelectionBox" class="select2" tabindex="-1" aria-hidden="false"></select>
+                      
+                      </div>     
+                      </div>     
+
+
+
+                  <div class="card-body">
+                   <label for="inputText3" class="col-lg-6 col-form-label text-sm-left">Machine Type</label>
+                        <!-- <div class="col-12 col-sm-8 col-lg-3"> -->
+                      <div class="col-12 col-sm-8 col-lg-6">
+                        <select  onchange="newMachineTypeSelected(this)" id="machineTypeSelectionBox" class="select2" tabindex="-1" aria-hidden="false">
+                        </select>
+ 
+                      </div>
+                      </div>          
+
+
+
+
+                 <div class="card-body">
+                   <label for="inputText3" class="col-lg-6 col-form-label text-sm-left">Status</label>
+                        <!-- <div class="col-12 col-sm-8 col-lg-3"> -->
+                      <div class="col-12 col-sm-8 col-lg-6">
+                      <div class="switch-button col-12 switch-button-lg">
+                          <input  onchange="machineEnableSwitchHandler(this.value)" type="checkbox" checked="" name="swt4" id="swt4"><span>
+                            <label for="swt4"></label></span>
+                        </div>
+                      </div>
+                      </div>        
+
+
+                     
+
+
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <!--colors-->
+              <div class="card">
+                <div class="card-header card-header">Coin Count
+                  <button onClick="editCoinCapacityHandler()" type="button" class="button-transparent" aria-hidden="true">Edit Coin Capacity</button><span class="card-subtitle"></span>
+                </div>
+                
+                <div class="card-body">
+                 
+
+                  
+              
+
+                 <div class="card-body">
+                  <div class="mt-3 mb-2">
+                    <p  id="coinCapacityPercentageLabel" class="text-left"  style="font-size:30px">80%</p>
+                    <div class="progress mb-4">
+                      <div id="progressBarCoinCapacitySlider" role="progressbar" style="width: 80%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-primary">80%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+
+                    <p  class="text-left" id="coinCountLabelID" style="font-size:30px">240/350 coins</p>  
+                      <button onClick="resetCoinCountButtonHandler()" type="button" class="btn btn-space btn-primary-right active" aria-hidden="true">Reset Coin Count</button>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="col-md-12">
+              <!--colors-->
+              <div class="card">
+                <div class="card-header card-header">Pricing and Modes<span ></span>
+                  <label  onClick="copyMachinePricing()" class="col-form-label-shinepay text-sm-right-right">Copy Pricing to other Machines</label>
+                  
+                </div>
+                <div class="card-body">
+            
+
+                <div id="pricingModesBody" class="card-body">
+                  <!-- JAVASCRIPT PUTS IN FIEILDS HERE -->
+                </div>
+                    <button   onClick="addNewPricingOption()" class="button-transparent2">+ Add additional pricing options</button>
+
+                    
+          <button  onClick="updateMachinePricingHandler()" class="btn btn-space btn-primary-right active">Update</button>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          
+        
+
+
+
+
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header"><span class="card-subtitle"></span></div>
+                <div class="card-body">
+            
+
+
+    <button onclick="deleteMachineButtonHandler()" class="btn btn-space btn-danger active" >Delete Machine</button>
+
+
+                  
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+                       <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            
+
+      <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+           
+            
+          </div>
+
+    </div>
+
+
+
+
+
+
+    
+    
+    
+  
+
+    
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.gritter/js/jquery.gritter.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+
+<!-- Firebase App is always required and must be first -->
+<script src="../../www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="../../www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+
+
+
+<script src="assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+<script defer src="../../pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+
+
+    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+    <script src="assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
+<script src="assets/js/app-table-filters.js" type="text/javascript"></script>
+    <script src="assets/js/app-form-elements.js" type="text/javascript"></script>
+<script defer src="../../pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      	//initialize the javascript
+      	//App.init();
+      	//App.formElements();
+        numberOfPricingOptions= 1;
+
+
+
+
+  // $('#button').click( function () {
+  //   alert( table.rows('.selected').data().length +' row(s) selected' );
+  // } );
+        
+      });
+
+
+var numberOfPricingOptions= 0;
+
+
+  var config = {
+    apiKey: "AIzaSyD32ASsOC4RVhVjDEJtxZhFd457HYR4DyU",
+    authDomain: "cleanpay-5c93c.firebaseapp.com",
+    databaseURL: "https://cleanpay-5c93c.firebaseio.com",
+    projectId: "cleanpay-5c93c",
+    storageBucket: "cleanpay-5c93c.appspot.com",
+    messagingSenderId: "531432738406"
+  };
+
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        
+        const functions = firebase.functions();
+        //require("firebase/functions");
+
+
+var machineDict = {};
+var firstOpen = true;
+
+var machineID;
+
+
+
+
+
+
+function addNewLocationButtonHandler()
+{
+
+
+
+
+}
+
+
+
+
+function addNewTypeButtonHandler()
+{
+
+
+
+
+}
+
+
+
+
+
+
+function editCoinCapacityHandler()
+{
+
+  $('#editCoinCapacityModal').modal('show');
+
+
+
+}
+
+
+
+
+function dismissEditCoinCapacityModal()
+{
+
+  $('#editCoinCapacityModal').modal('hide');
+
+
+
+}
+
+
+
+
+
+
+
+function showSuccessModal()
+{
+  $('#SuccessModal').modal('show');
+}
+
+
+function dismissSuccess()
+{
+  $('#SuccessModal').modal('hide');
+}
+
+
+
+
+
+function deleteMachineButtonHandler()
+{
+
+console.log(machineID);
+
+
+
+var data = {machineID: machineID};
+
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('removeMachineForOperator');
+  transactionFunctionCall(data).then(function(result) {
+
+
+
+        showSuccessModal();
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+
+
+
+}
+
+
+
+
+function copyMachinePricing()
+{
+
+  console.log('copy pricing')
+
+
+  $('#copyPricingModal').modal('show');
+
+
+
+
+
+
+
+  
+}
+
+
+
+
+
+function addRowInList( selectionBoxID, storeName)
+{
+
+
+    var signUpDate = document.getElementById(selectionBoxID);
+        var value = document.createElement("option");
+        value.innerText = storeName;        
+        signUpDate.appendChild(value);
+        
+
+}
+
+
+
+
+
+
+function newLocationSelectedHandler(element)
+{
+  console.log('new location selected');
+
+  
+  var data1 = {key: 'store_name',
+            value: storesArray[element.selectedIndex].name };
+
+
+ var data2 = {key: 'sid',
+            value: storesArray[element.selectedIndex].sid };            
+
+
+
+  updateMachineData(machineID, data1);
+  updateMachineData(machineID, data2);
+
+
+}
+
+
+
+
+function newMachineTypeSelected(element)
+{
+  console.log('new machine type selected');
+console.log(machineTypesArray[element.selectedIndex] )
+    
+
+
+     var data1 = {key: 'type',
+            value: machineTypesArray[element.selectedIndex] };            
+
+
+
+  updateMachineData(machineID, data1);
+
+  
+}
+
+
+
+
+function resetCoinCountButtonHandler()
+{
+
+
+  console.log('reset coin count')
+
+  var data = {key: 'coincount',
+            value: 0 };
+
+
+
+
+            
+
+            updateMachineData(machineID, data );
+            dismissEditCoinCapacityModal();
+
+
+
+}
+
+
+
+function updateMachinePricingHandler()
+{
+
+            var card = document.getElementById('loadingCard');
+                  card.setAttribute('class' , 'be-loading-active');
+
+    console.log('got to pricing handler')
+    var pricingArray = [];
+
+
+    for(var i =0; i<(numberOfPricingOptions-1); i++)
+    {
+      console.log('value ' + i); 
+
+      var pricingText = document.getElementById('pricing' + (i+1).toString());
+      var modeText = document.getElementById('mode' + (i+1).toString());
+      var price = pricingText.value;
+      var mode = modeText.value;
+
+
+       
+       var pricingDict = {price: parseFloat(price),
+                          name: mode};
+
+      pricingArray.push(pricingDict);
+      
+
+
+
+    }
+
+      var data = {key: 'price',
+            value: pricingArray };
+      updateMachineData(machineID, data );            
+
+}
+
+
+
+function getOperatorLocations()
+{
+
+
+
+  var transactionFunctionCall = firebase.functions().httpsCallable('getLocationsForOperator');
+  transactionFunctionCall({user: " "}).then(function(result) {
+    // Read result of the Cloud Function.
+    storesArray = result.data.stores;
+
+
+
+    
+
+if(storesArray.length !=0)
+{
+
+    for (var i = 0; i < storesArray.length; i++) {
+      
+      var store= storesArray[i];
+      addRowInList('locationSelectionBox',  store["name"])
+      var locationSelectionBox = document.getElementById('locationSelectionBox');
+      if(store.sid === machineDict.sid)
+      {
+        locationSelectionBox.selectedIndex = i;
+      }
+
+    }
+  }
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', message);
+    console.error('There was an error when calling the Cloud Function', code);
+    ////window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+      //  //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function addRowInList( selectionBoxID, storeName)
+{
+
+
+    var signUpDate = document.getElementById(selectionBoxID);
+        var value = document.createElement("option");
+        value.innerText = storeName;        
+        signUpDate.appendChild(value);
+
+}
+
+
+
+
+var machineTypesArray =[];
+
+
+function getMachineTypes()
+{
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('getMachineTypesForOperator');
+  transactionFunctionCall({user: " "}).then(function(result) {
+    // machineTypesArray.push('Washer')
+    // machineTypesArray.push('Dryer')
+    // Read result of the Cloud Function.
+     machineTypesArray = result.data.types;
+    var machineTypeSelectionBox = document.getElementById('machineTypeSelectionBox');
+
+
+
+    if(!machineTypesArray)
+    {
+      machineTypesArray = [];
+
+    }
+          machineTypesArray.push('Washer');
+      machineTypesArray.push('Dryer');
+
+      if('Dryer' === machineDict.type)
+      {
+        machineTypeSelectionBox.selectedIndex = 1;
+      }
+      else if('Washer' === machineDict.type)
+      {
+        machineTypeSelectionBox.selectedIndex = 0;
+      }
+
+
+
+  if(machineTypesArray)
+    for (var i = 0; i < machineTypesArray.length; i++) {
+      
+      var type= machineTypesArray[i];
+      addRowInList('machineTypeSelectionBox',  type)
+       
+      if(type === machineDict.type)
+      {
+        machineTypeSelectionBox.selectedIndex = i;
+      }
+
+
+
+    }
+  
+
+
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+function addNewPricingOption()
+{
+
+
+
+var pricingModesBody = document.getElementById('pricingModesBody');
+var pricingOptionDiv = document.createElement('div');
+pricingOptionDiv.setAttribute('class',"form-group row");
+pricingOptionDiv.setAttribute('id',"pricingOption" + numberOfPricingOptions.toString());
+
+
+
+var label1 = document.createElement("label");
+label1.setAttribute('class',"col-12 col-lg-2 col-form-label text-sm-left");
+label1.innerText = "Pricing Option " +numberOfPricingOptions;
+pricingOptionDiv.appendChild(label1);
+
+
+
+
+
+var inputPricingDiv1 = document.createElement('div');
+inputPricingDiv1.setAttribute('class',"col-12 col-sm-8 col-lg-3");
+var textInput1 = document.createElement("input");
+textInput1.setAttribute('class',"form-control");
+textInput1.innerText = "Pricing Option " + numberOfPricingOptions;
+textInput1.setAttribute('id',"pricing" + numberOfPricingOptions.toString());
+inputPricingDiv1.appendChild(textInput1)
+pricingOptionDiv.appendChild(inputPricingDiv1);
+
+
+
+var label2 = document.createElement("label");
+label2.setAttribute('class',"col-12 col-lg-2 col-form-label text-sm-left");
+label2.innerText = "Mode";
+pricingOptionDiv.appendChild(label2);
+
+var inputPricingDiv2 = document.createElement('div');
+inputPricingDiv2.setAttribute('class',"col-12 col-sm-8 col-lg-3");
+var textInput2 = document.createElement("input");
+textInput2.setAttribute('class',"form-control");
+textInput2.setAttribute('id',"mode" + numberOfPricingOptions.toString());
+inputPricingDiv2.appendChild(textInput2)
+pricingOptionDiv.appendChild(inputPricingDiv2);
+
+
+
+var button = document.createElement("button");
+button.setAttribute('class',"btn btn-space btn-primary-right active");
+button.setAttribute('onClick',"deleteMachinePriceHandler(" + numberOfPricingOptions.toString() + ")");
+button.innerText = "Delete";
+pricingOptionDiv.appendChild(button);
+
+
+
+
+pricingModesBody.appendChild(pricingOptionDiv)
+
+
+
+numberOfPricingOptions++;
+  //createPricingOptiionsStructure()
+}
+
+
+
+function deleteMachinePriceHandler(id)
+{
+  console.log(id);
+if(numberOfPricingOptions > 2)
+{
+  var pricingElement = document.getElementById('pricingOption' + id);
+  numberOfPricingOptions--;
+pricingElement.parentNode.removeChild(pricingElement);
+
+}
+else
+{
+  console.log('You can not remove prices when less than one.')
+
+  $('#minimumPriceAmountModal').modal('show');
+
+  
+}
+
+
+
+
+
+}
+
+
+
+
+function submitCoinCapacityChangesToDb()
+{
+
+
+
+
+
+var machineCapacityTextBox = document.getElementById('machineCapacityTextBox')
+
+var data = {key: 'coinCapacity',
+            value: parseInt(machineCapacityTextBox.value) };
+
+
+
+            machineCapacityTextBox.value = "";
+
+            updateMachineData(machineID, data );
+            dismissEditCoinCapacityModal();
+
+
+}
+
+
+
+
+
+function machineEnableSwitchHandler(value)
+{
+
+  
+  var machineEnableSwitch = document.getElementById('swt4').checked;
+
+  console.log(machineEnableSwitch)
+
+
+  var data = {key: 'isenabled',
+            value: machineEnableSwitch };
+
+
+            updateMachineData(machineID, data );
+            dismissEditCoinCapacityModal();
+
+
+}
+
+
+
+
+
+
+
+
+
+function updateUI()
+{
+
+
+
+
+    var machineTitleLabel = document.getElementById('machineTitleLabelID');
+    
+
+
+    var copyPricingTitleHeader = document.getElementById('copyPricingTitleHeader');
+    var coinCountLabelID = document.getElementById('coinCountLabelID');
+    var coinCapacityPercentageLabel = document.getElementById('coinCapacityPercentageLabel');
+
+
+copyPricingTitleHeader.innerText = 'Copy ' + machineID + ' pricing to machines:'
+      machineIDBreadcrumb.innerText = machineID;
+      machineTitleLabel.innerText = 'Machine ' + machineID;      
+        
+}
+
+
+
+
+
+
+
+
+
+function getMachineData()
+{
+
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('getMachineForOperator');
+  transactionFunctionCall({machineID: machineID}).then(function(result) {
+    // Read result of the Cloud Function.
+    machineDict = result.data.machine;
+
+
+    getMachineTypes();
+    getOperatorLocations();
+
+    
+var countCapacity = machineDict.coinCapacity;
+if(!countCapacity)
+  countCapacity = 400;
+
+
+
+  
+
+    
+    var coinCountLabel = document.getElementById('coinCountLabelID');
+    var coinCapacityPercentageLabel = document.getElementById('coinCapacityPercentageLabel');
+    var progressBarCoinCapacity = document.getElementById('progressBarCoinCapacitySlider');
+    var locationSelectionBox = document.getElementById('locationSelectionBox');
+    var machineEnableSwitch = document.getElementById('swt4');
+
+
+    machineEnableSwitch.checked = machineDict.isenabled;
+
+var coinPercentage  = machineDict.coincount/countCapacity*100;
+coinPercentage = parseFloat(coinPercentage).toFixed(0);
+
+coinCapacityPercentageLabel.innerText =  coinPercentage + "%" 
+coinCountLabel.innerText = machineDict.coincount  + "/" + countCapacity + " coins"
+progressBarCoinCapacity.style.width =  coinPercentage + "%";
+progressBarCoinCapacity.innerText = coinPercentage + "%";
+locationSelectionBox.value  = machineDict.storeName; 
+
+var pricesArray = machineDict.price;
+for(var i =0; i<pricesArray.length; i++)
+{
+  addNewPricingOption();
+  console.log(pricesArray[i].price)
+var pricingText = document.getElementById('pricing' + (i+1).toString());
+var modeText = document.getElementById('mode' + (i+1).toString());
+var prices;
+var modeText;
+
+if(pricingText)
+{
+ prices = pricesArray[i].price;
+ pricingText.value =  parseFloat(prices).toFixed(2);
+}
+if(modeText)
+{
+ mode = pricesArray[i].name;
+ modeText.value =  mode;
+}
+
+ 
+ 
+
+
+}
+
+document.getElementById('swt4').checked = machineDict.isenabled;
+
+  //update coin count percentage
+  //update coin count number
+  //generate price & mode section
+  //update machine type 
+  //update machine location
+  //update status
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+
+    window.location.href = '../managemachines.html';
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+
+
+
+
+
+
+
+
+}
+
+
+function copyPricingButtonHandler()
+{
+  $('#copyPricingModal').modal('hide');
+
+
+
+
+
+
+
+
+
+
+
+  var pricingArray = [];
+
+
+    for(var i =0; i<(numberOfPricingOptions-1); i++)
+    {
+      console.log('value ' + i); 
+
+      var pricingText = document.getElementById('pricing' + (i+1).toString());
+      var modeText = document.getElementById('mode' + (i+1).toString());
+      var price = pricingText.value;
+      var mode = modeText.value;
+
+
+       
+       var pricingDict = {price: parseFloat(price),
+                          name: mode};
+
+      pricingArray.push(pricingDict);
+      
+
+
+
+    }
+
+      var data = {key: 'price',
+            value: pricingArray };
+       
+
+
+
+
+
+
+for(key in copyPricingMachineArray)
+{
+  if(copyPricingMachineArray[key] === 1)
+  {
+    console.log(key);
+        updateMachineData(key, data );  
+  }
+
+
+
+
+}
+  
+  
+}
+
+
+
+
+
+function updateMachineData(machineID, valuKeyPair )
+{
+
+// var value = {key: "",
+//              value: ""};
+
+var data = {machineData: valuKeyPair,
+            machineID: machineID};
+
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('updateMachineInformationForOperator');
+  transactionFunctionCall(data).then(function(result) {
+
+
+            var card = document.getElementById('loadingCard');
+                  card.setAttribute('class' , 'be-loading');
+        showSuccessModal();
+
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+
+
+
+
+
+}
+
+var copyPricingMachineArray = {};
+
+
+
+
+
+
+function getMachines()
+{
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('getMachinesForOperator');
+  transactionFunctionCall({user: " "}).then(function(result) {
+    // Read result of the Cloud Function.
+    var machinesArray = result.data.machines;
+
+    
+    console.log(machinesArray.length);
+
+    
+    for (var i = 0; i < machinesArray.length; i++) {
+      var machine = machinesArray[i];
+      
+      createRowInTable(machine.store_name, 
+                      machine.mid, 
+                      machine.type,
+                      machine.price,
+                      machine.isenabled,
+                      machine.coincount);
+    }
+
+
+              
+        var table = $('#copyPricingTable').DataTable({
+  "lengthChange": false
+});
+
+
+
+  $('#copyPricingTable').on( 'click', 'tr', function () {
+    $(this).toggleClass('selected');
+
+    
+    if(!(this.id in copyPricingMachineArray))
+    {
+      copyPricingMachineArray[this.id] = 1;
+      
+    }
+    else if(copyPricingMachineArray[this.id] === 1)
+    {
+      copyPricingMachineArray[this.id]  =0;
+    }
+    else if(copyPricingMachineArray[this.id] === 0)
+    {
+      copyPricingMachineArray[this.id]  =1;
+    }
+    
+    console.log(copyPricingMachineArray)
+  } );
+  
+      var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function createRowInTable(location, machine, machineType, price ,enabled, coinCount)
+{
+
+        var tbl = document.getElementById('tpricing');
+
+             var row = document.createElement("tr");
+             // row.setAttribute('onClick',"machineSelectedHandler(\"" + machine+ "\")");
+             row.setAttribute('id',machine);
+       
+       // create cells in row
+             for (var c = 0; c < 2; c++) {
+                var cell = document.createElement("td");
+    
+              if(c ==0)
+              {
+                var cellText = document.createTextNode(machine);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+              }
+              else if(c ==1)
+              {
+                var cellText = document.createTextNode(location);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+              }
+            }
+              
+            tbl.appendChild(row); // add the row to the end of the table body
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function signOut()
+{
+    console.log('signing out...');
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        console.log('signing out')
+        firebase.auth().signOut();
+        console.log('signed out')
+        // [END signout]
+      } else {
+        console.log('not signed in')
+
+  }
+}
+
+
+
+        const signout = () => {
+            auth.signOut();
+        };
+
+
+
+
+
+
+
+
+
+function getPermissions()
+{
+
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('confirmUserHasDistributorPermission');
+  transactionFunctionCall({email: firebase.auth().currentUser.email}).then(function(result) {
+  var outcome = result.data.outcome;
+
+if(outcome === false)
+{
+  signout()
+  $('#noPermissionModal').modal('show');
+}
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+
+    
+
+  });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        auth.onAuthStateChanged((authData) => {
+            if (authData) {
+                console.log('Logged in')
+                App.init();
+                App.tableFilters();
+                //App.formElements();
+
+
+                var locationHash = location.hash
+                machineID = locationHash.substring(3, locationHash.length);
+                console.log(machineID);
+                updateUI();
+                
+                getPermissions();
+
+                x=document.getElementsByClassName("user-name");  // Find the elements
+                  for(var i = 0; i < x.length; i++){
+                  x[i].innerText=firebase.auth().currentUser.email;    // Change the content
+                  }
+            
+             //   getLocationSummary();
+ 
+
+                getMachineData();
+                getMachines();
+
+                  //init Datepicker
+
+
+
+                
+        
+
+            } else {
+                console.log('Logged out')
+                window.location.href = '../index-2.html';
+
+
+            }
+        });
+
+
+
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="generateReportModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Generate Report</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter the start date and end date of the report you want to generate:</p>
+
+
+
+
+                    <label class="col-12 col-sm-3 col-form-label text-sm-right"> Start Date </label>
+                      <div class="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+                        <div id="startDatePicker" data-min-view="2" data-date-format="yyyy-mm-dd" class="input-group date datetimepicker">
+                          <input id="startDateLabel" size="16" type="text" value="" class="form-control">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary"><i class="icon-th mdi mdi-calendar"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+
+
+
+                    <label class="col-12 col-sm-3 col-form-label text-sm-right"> End Date </label>
+                      <div class="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+                        <div id="endDatePicker" data-min-view="2" data-date-format="yyyy-mm-dd" class="input-group date datetimepicker">
+                          <input  id="endDateLabel"   size="16" type="text" value="" class="form-control">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary"><i class="icon-th mdi mdi-calendar"></i></button>
+                          </div>
+                        </div>
+                      </div>                      
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="generateReport()" type="button" class="btn btn-success modal-close" >Generate Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="editCoinCapacityModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Edit coin capacity</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter new coin capacity</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Capacity</label>
+                          <input id="machineCapacityTextBox" placeholder="450" class="form-control">
+                </div>
+                </div>
+
+
+              
+
+
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="submitCoinCapacityChangesToDb()" type="button" class="btn btn-success modal-close" >Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="minimumPriceAmountModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+      <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+          </div>
+        <div class="modal-body">
+            <div class="text-center">
+              <div class="text-danger"><span class="modal-main-icon mdi mdi-close-circle-o"></span></div>
+              <h3>Minimum Prices</h3>
+              <p id="failureDescription">You need at least one price on the machine.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+            <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="SuccessModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Success</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Success.</p>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+            <button data-dismiss="modal" type="button" class="btn btn-success-shinepay modal-close" >OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="copyPricingModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="copyPricingTitleHeader" class="modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            
+
+  <table id="copyPricingTable" class="display" style="width:100%">
+          <thead>
+            <tr>
+              <th>Machine</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody id="tpricing">
+<!--             <tr id="1">
+              <td>100991</td>
+              <td>System</td>
+            </tr>
+            <tr id="2">
+              <td>100992</td>
+              <td>System</td>
+            </tr> -->
+          </tbody>
+         
+        </table>
+
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button  onClick="copyPricingButtonHandler()" type="button" class="btn btn-success-shinepay modal-close" >Copy pricing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Mirrored from shinepay.io/distributor/machine.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:18:25 GMT -->
+</html>

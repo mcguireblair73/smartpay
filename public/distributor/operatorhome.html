@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from shinepay.io/distributor/operatorhome.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:16:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="George Melcer">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>ShineDistributor</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/lib/datatables/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper">
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a href="index.html" class="navbar-brand"></a>
+          </div>
+          <div class="be-right-navbar">
+
+                  <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name"></span></a>
+                <div role="menu" class="dropdown-menu">     
+                  <div class="user-info">
+                    <div class="user-name"></div>
+                    <!--  -->
+                  </div>
+               <!--    <a href="pages-profile.html" class="dropdown-item"><span class="icon mdi mdi-face"></span> Account</a>
+                  <a href="#" class="dropdown-item"><span class="icon mdi mdi-settings"></span> Settings</a> -->
+                  <a onClick="signOut()" class="dropdown-item"><span class="icon mdi mdi-power"></span> Logout</a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="page-title"><span></span></div>
+            <ul class="nav navbar-nav float-right be-icons-nav">
+              <!-- <li class="nav-item dropdown"><a href="#" role="button" aria-expanded="false" class="nav-link be-toggle-right-sidebar"><span class="icon mdi mdi-settings"></span></a></li>
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
+                <ul class="dropdown-menu be-notifications">
+                  <li>
+                    <div class="title">Notifications<span class="badge badge-pill">3</span></div>
+                    <div class="list">
+                      <div class="be-scroller">
+                        <div class="content">
+                          <ul>
+                            <li class="notification notification-unread"><a href="#">
+                                <div class="image"><img src="assets/img/avatar2.png" alt="Avatar"></div>
+                                <div class="notification-info">
+                                  <div class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</div><span class="date">2 min ago</span>
+                                </div></a></li>
+                            <li class="notification"><a href="#">
+                                <div class="image"><img src="assets/img/avatar3.png" alt="Avatar"></div>
+                                <div class="notification-info">
+                                  <div class="text"><span class="user-name">Joel King</span> is now following you</div><span class="date">2 days ago</span>
+                                </div></a></li>
+                            <li class="notification"><a href="#">
+                                <div class="image"><img src="assets/img/avatar4.png" alt="Avatar"></div>
+                                <div class="notification-info">
+                                  <div class="text"><span class="user-name">John Doe</span> is watching your main repository</div><span class="date">2 days ago</span>
+                                </div></a></li>
+                            <li class="notification"><a href="#">
+                                <div class="image"><img src="assets/img/avatar5.png" alt="Avatar"></div>
+                                <div class="notification-info"><span class="text"><span class="user-name">Emily Carter</span> is now following you</span><span class="date">5 days ago</span></div></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="footer"> <a href="#">View all notifications</a></div>
+                  </li>
+                </ul>
+              </li> -->
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"></a>
+             <!-- <div class="page-title"><span>Manage Machines</span></div> -->
+            <ul class="nav navbar-nav float-right be-icons-nav">
+
+
+              
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon fas fa-th"></i></a>
+                <ul class="dropdown-menu be-connections">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        
+                           <div class="col"><a href="../transactions.html" ><span>ShineInsights</span></a></div>
+                          <div class="col"><a href="operatorhome.html" ><span>ShineDistributor</span></a></div>
+                          <div class="col"><a href="http://help.getshinepay.com/"><span>Help Center</span></a></div>
+                          
+                        
+                      </div>
+                    </div>
+                    
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">ShineDistributor</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements">
+                  
+                  <li><a href="operatorhome.html"><i class="icon fal fa-wrench"></i><span>Installations</span></a>
+                  </li>                  
+                  <li><a href="techhome.html"><i class="icon fal fa-user-shield"></i><span>Techs</span></a>
+                  </li>
+                  <li><a href="account.html"><i class="icon fal fa-cog"></i><span>Account</span></a>
+                  </li>
+
+     
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="be-content">
+        <div class="page-head">
+          <h2 class="page-head-title">Installations</h2>
+          <nav aria-label="breadcrumb" role="navigation">
+            <button onClick="showAddOperatorModal()" class="btn btn-space btn-primary-right active">Add New Customer</button>
+            <ol class="breadcrumb page-head-nav">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Installations</a></li>
+              
+            </ol>
+          </nav>
+        </div>
+        <div id="loadingCard"  class="main-content container-fluid be-loading">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card card-table">
+
+                <div class="card-body">
+              <div class="card">
+                <div class="card-header card-header-divider">Customer Installations<span class="card-subtitle"></span>
+                
+                </div>
+                <div class="card-body">
+                  <div class="mt-2 mb-4">
+                    <div id="test123" class="list-group d-flex">
+                      <!-- PLACE HOLDER FOR JAVA SCRIPT -->
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+
+
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+<!-- Firebase App is always required and must be first -->
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+<script defer src="../../pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      // $(document).ready(function(){
+      // 	//initialize the javascript
+      // 	App.init();
+      // 	App.dataTables();
+        
+      // });
+
+
+
+
+
+  var config = {
+    apiKey: "AIzaSyD32ASsOC4RVhVjDEJtxZhFd457HYR4DyU",
+    authDomain: "cleanpay-5c93c.firebaseapp.com",
+    databaseURL: "https://cleanpay-5c93c.firebaseio.com",
+    projectId: "cleanpay-5c93c",
+    storageBucket: "cleanpay-5c93c.appspot.com",
+    messagingSenderId: "531432738406"
+  };
+
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        
+        const functions = firebase.functions();
+
+
+
+
+
+
+
+var machineSelectedIndex = 0
+var storeSelectedIndex =0;
+var permissionsArray = [];
+
+
+
+
+
+
+
+
+function getOperators()
+{
+    //history.replaceState(null, document.title, location.pathname+"#!/storesView");
+    
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('getOperatorsForDistributor');
+  transactionFunctionCall({machineID: 0}).then(function(result) {
+    // Read result of the Cloud Function.
+    permissionsArray = result.data.permissions;
+
+   var tbl = document.getElementsByClassName('list-group d-flex');
+    tbl[0].innerText = "";
+
+  if(permissionsArray)
+    for (var i = 0; i < permissionsArray.length; i++) {
+      
+            var permission = permissionsArray[i];
+            var li = document.createElement("span");
+            li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+            li.setAttribute('onClick','selectOperatorHandler(' + '\"'  + permission["grantee_email"] + '\"'  + ')' );
+            
+            
+
+            li.appendChild(document.createTextNode(permission["grantee_email"]));
+            tbl[0].appendChild(li);
+
+
+      
+    }
+  
+        var card = document.getElementById('loadingCard');
+                  card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+}
+
+
+
+
+
+function selectOperatorHandler(email)
+{
+  
+    window.location.href = 'managemachines.html#!/' + email;
+
+}
+
+
+
+
+
+
+function addOperatortoDB()
+{
+  var userId = firebase.auth().currentUser.uid;
+  var email = firebase.auth().currentUser.email;
+  console.log("Add Operator");
+  var firstNameTextField = document.getElementById("firstNameTextField");
+  var lastNameTextField = document.getElementById("lastNameTextField");
+  var emailTextField = document.getElementById("emailTextField");
+  var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+
+var operatorObj = { grantee_email: emailTextField.value.toLowerCase(),
+                    firstName: firstNameTextField.value,
+                    lastName: lastNameTextField.value
+                  };
+
+
+
+
+      var transactionFunctionCall = firebase.functions().httpsCallable('addOperatorForDistributor');
+      transactionFunctionCall(operatorObj).then(function(result) {
+        // Read result of the Cloud Function.
+        result = result.data.result;
+        var card = document.getElementById('loadingCard');
+        card.setAttribute('class' , 'main-content container-fluid be-loading');
+        console.log(result);
+        
+
+        showSuccessModal();
+
+      
+
+
+
+
+
+
+      }).catch(function(error) {
+        // Getting the Error details.
+        var code = error.code;
+        var message = error.message;
+        var details = error.details;
+        // [START_EXCLUDE]
+        //machineExistsModal
+           var card = document.getElementById('loadingCard');
+          card.setAttribute('class' , 'main-content container-fluid be-loading');
+        
+        
+        console.error(' message' +message);
+        console.error('details' + details["msg"]);
+        console.error(code);
+        ////window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+          //  //+ code + '\nError Message:' + message + '\nError Details:' + details);
+        
+        // [END_EXCLUDE]
+        // [END_EXCLUDE]
+      });
+
+
+
+
+
+
+
+
+firstNameTextField.value = ""
+lastNameTextField.value = ""
+emailTextField.value = ""
+
+
+
+
+
+
+
+$('#addOperatorModal').modal('hide');
+
+
+}
+
+
+
+
+
+
+function addOperatortoDB1()
+{
+  var userId = firebase.auth().currentUser.uid;
+  var email = firebase.auth().currentUser.email;
+  console.log("Add Operator");
+  var firstNameTextField = document.getElementById("firstNameTextField");
+  var lastNameTextField = document.getElementById("lastNameTextField");
+  var emailTextField = document.getElementById("emailTextField");
+  
+
+
+
+
+
+
+
+
+firstNameTextField.value = ""
+lastNameTextField.value = ""
+emailTextField.value = ""
+
+
+
+
+
+
+
+$('#addOperatorModal').modal('hide');
+
+
+}
+
+
+function showAddOperatorModal()
+{
+
+
+$('#addOperatorModal').modal('show');
+
+
+
+}
+
+
+function promptToEditOrRemove()
+{
+
+$('#removeAttedantModal').modal('show');
+
+}
+
+
+
+function dismissSuccess()
+{
+  $('#SuccessModal').modal('hide');
+}
+
+
+function showSuccessModal()
+{
+$('#removeAttedantModal').modal('hide');
+$('#SuccessModal').modal('show');
+
+}
+
+
+
+
+
+
+
+
+function clearTable() {
+  
+
+   var Table = document.getElementById("test123");
+   console.log(Table)
+    Table.innerHTML = "";
+
+  }
+
+
+
+
+function signOut()
+{
+    console.log('signing out...');
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        console.log('signing out')
+        firebase.auth().signOut();
+        console.log('signed out')
+        // [END signout]
+      } else {
+        console.log('not signed in')
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const signout = () => {
+            auth.signOut();
+        };
+
+
+
+
+
+
+function getPermissions()
+{
+
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('confirmUserHasDistributorPermission');
+  transactionFunctionCall({email: firebase.auth().currentUser.email}).then(function(result) {
+  var outcome = result.data.outcome;
+
+if(outcome === false)
+{
+  // window.location.href = './index.html';
+  signout();
+}
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+
+    window.location.href = 'managemachines.html';
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        auth.onAuthStateChanged((authData) => {
+            if (authData) {
+                console.log('Logged in')
+                App.init();
+                
+            var card = document.getElementById('loadingCard');
+                  card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+              getPermissions();
+              getOperators();
+               x=document.getElementsByClassName("user-name");  // Find the elements
+                  for(var i = 0; i < x.length; i++){
+                  x[i].innerText=firebase.auth().currentUser.email;    // Change the content
+                  }
+     
+
+
+            } else {
+                console.log('Logged out')
+                window.location.href = 'index.html';
+               // $loginFormContainer.show();
+                // $homeContainer.hide();
+
+            }
+        });
+
+
+
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="removeAttedantModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Confirm</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Are you sure you want to remove this attendant?</p>
+            <p>If you aren't, you can always re-add them -- better safe than sorry :)</p>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button"  onClick="dismissSuccess()" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="showSuccessModal()" type="button" class="btn btn-success modal-close" >Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+ <div id="SuccessModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Success</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Success</p>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+            <button onClick="dismissSuccess()" type="button" class="btn btn-success modal-close" >OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="addOperatorModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add Customer Permission</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter information below to add the customer and create their account. This will allow them to access ShineInsights. Additionally, it allows you to add machines to their account. </p>
+            
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Operator first name</label>
+                          <input id="firstNameTextField" placeholder="Jonny" class="form-control">
+                </div>
+                </div>
+
+
+                <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Operator last name</label>
+                          <input id="lastNameTextField" placeholder="Appleseed" class="form-control">
+                </div>
+                </div>
+
+
+                <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Operator email address</label>
+                          <input id="emailTextField" placeholder="jonny@appleseed.com" class="form-control">
+                </div>
+                </div>
+        
+
+
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="addOperatortoDB()" type="button" class="btn btn-success modal-close" >Add Customer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Mirrored from shinepay.io/distributor/operatorhome.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:17:00 GMT -->
+</html>

@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from shinepay.io/attendants.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:16:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>ShineInsights</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/lib/datatables/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper">
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a href="index-2.html" class="navbar-brand"></a>
+          </div>
+          <div class="be-right-navbar">
+
+
+    <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name"></span></a>
+                <div role="menu" class="dropdown-menu">     
+                  <div class="user-info">
+                    <div class="user-name"></div>
+                    
+                  </div>
+                  <a onClick="signOut()" class="dropdown-item"><span class="icon mdi mdi-power"></span> Logout</a>
+                </div>
+              </li>
+            </ul>
+          
+            
+  
+
+          <ul class="nav navbar-nav float-right be-icons-nav">
+              
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon fas fa-th"></i></a>
+                <ul class="dropdown-menu be-connections">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        
+                          <div class="col"><a href="#" ><span>ShineInsights</span></a></div>
+                          
+                          
+                          <div class="col"><a href="#"><span>Help Center</span></a></div>
+                          
+                        
+                      </div>
+                    </div>
+                    
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">ShineInsights</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements">
+                  <!-- <li class="divider">Menu</li> -->
+                 
+
+
+                          
+                                    <li><a href="dashboard.html"><i class="icon fal fa-chart-line"></i><span>Dashboard</span></a>
+                  </li>               
+                  <li><a href="managemachines.html"><i class="icon fal fa-browser"></i><span>Sparks</span></a>
+                  </li>
+                  <li><a href="locations.html"><i class="icon fal fa-map-marker"></i><span>Locations</span></a>
+                  </li>
+                  <li><a href="transactions.html"><i class="icon fal fa-list-alt"></i><span>Transactions</span></a>
+                  </li>
+                  <li><a href="reports.html"><i class="icon fal fa-chart-pie"></i><span>Reports</span></a>
+                  </li>
+                  <li><a href="refunds.html"><i class="icon fal fa-receipt"></i></i><span>Refunds</span></a>
+                  </li>
+                  <li><a href="customers.html"><i class="icon fal fa-users"></i><span>Customers</span></a>
+                  </li>
+                  <li><a href="attendants.html"><i class="icon fal fa-user-tag"></i><span>Attendants</span></a>
+                  </li>
+                  <li><a href="kiosk.html"><i class="icon fal fa-tablet-alt"></i><span>Kiosk</span></a>
+                  </li>
+                  <li><a href="income.html"><i class="icon fal fa-usd-square"></i><span>Income</span></a>
+                  </li>
+                  <!-- <li><a href="discounts.html"><i class="icon fal fa-usd-square"></i><span>Discounts</span></a>
+                  </li>                   -->
+                  <li><a href="account.html"><i class="icon fal fa-cog"></i><span>Account</span></a>
+                  </li>
+                  <li><a href="help.html"><i class="icon fas fa-question-circle"></i><span>Help</span></a>
+                  </li>
+
+
+     
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="be-content">
+        <div class="page-head">
+          <h2 class="page-head-title">Attendant</h2>
+          <button onclick="showAddAttendant()"   class="btn btn-space btn-primary-right active">Add New Attendant</button>
+          <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb page-head-nav">
+              <li class="breadcrumb-item"><a href="transactions.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="attendants.html">Attendant Permissions</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div id="loadingCard" class="main-content container-fluid be-loading">
+
+               <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card card-table">
+
+                <div class="card-body">
+                  
+              <div class="card">
+<button onClick="attendantActivationsHandler()" type="button" class="button-transparent" aria-hidden="true">Attendant Activations</button>
+                <div class="card-header">Attendants<span class="card-subtitle">Select the attendant to edit</span></div>
+                
+                <div class="card-body">
+
+                  <div class="mt-2 mb-4">
+                    <div id="test123" class="list-group d-flex">
+                  <!--       <a id="addMachineCell" class="list-group-item d-flex list-group-item-action"><span class="text-primary mdi mdi-fire icon"></span><span class="text">Add New Attedant</span></a> -->
+                      <!-- PLACE HOLDER FOR JAVA SCRIPT -->
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+ 
+           
+
+          </div>
+         
+        </div>
+      </div>
+    
+    <!-- </div> -->
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+<script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      	//initialize the javascript
+    var card = document.getElementById('loadingCard');
+                  card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+        
+      });
+
+
+
+
+
+    var config = {
+    apiKey: "AIzaSyBi9uQZExymWoOz47IoGoxZ4DEOWpaAZNk",
+    authDomain: "smartpay-bc639.firebaseapp.com",
+    databaseURL: "https://smartpay-bc639-default-rtdb.firebaseio.com",
+    projectId: "smartpay-bc639",
+    storageBucket: "smartpay-bc639.firebasestorage.app",
+    messagingSenderId: "52960112231"
+  };
+
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        
+        const functions = firebase.functions();
+
+
+
+
+
+
+var attendantSelectedIndex;
+var attendantPermissionsObjs = [];
+
+
+function attendantActivationsHandler()
+{
+
+ 
+ window.location.href = 'attendantactivations.html'
+}
+
+
+
+
+function getAttendants()
+{
+
+
+    var transactionFunctionCall = firebase.functions().httpsCallable('getAttendantsForOperator');
+    transactionFunctionCall({text: " "}).then(function(result) {
+      // Read result of the Cloud Function.
+      attendantPermissionsObjs = result.data.attendants;
+  console.log(attendantPermissionsObjs.length);
+          // var tbl = document.getElementsByClassName('list-group d-flex');
+    // tbl[0].innerText = "";
+
+    var tbl = document.getElementsByClassName('list-group d-flex');
+    tbl[0].innerText = "";
+
+  if(attendantPermissionsObjs.length ==0)
+  {
+    //createRowInTable("No Transactions Found" , "--", "--", "--", "--" , "--", "--","--")
+  }
+  else
+  {
+
+      
+         for(var i =0 ; i< attendantPermissionsObjs.length; i++)
+         {            
+           
+            
+             var li = document.createElement("span");
+            li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+            li.setAttribute('onClick',"promptToEditOrRemove(" + i.toString() + ")");
+            li.appendChild(document.createTextNode(attendantPermissionsObjs[i].grantee_email ));
+            tbl[0].appendChild(li);
+
+
+          }
+    
+
+    }
+     App.dataTables();
+           var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+    // [START catchError]
+    }).catch(function(error) {
+      // Getting the Error details.
+      
+      var message = error.message;
+      showErrorMessageWithMessage(message);
+      
+      // [START_EXCLUDE]
+      console.error('There was an error when calling the Cloud Function', error);
+      //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+          //+ code + '\nError Message:' + message + '\nError Details:' + details);
+      
+      
+      
+    });
+
+
+
+
+
+}
+
+
+
+
+
+function showErrorMessageWithMessage(message)
+{
+  var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+      var errorLabel = document.getElementById('errorDescription');
+        errorLabel.innerText = message
+      $('#errorModal').modal('show');  
+}
+
+
+
+
+function removeAttendant()
+{
+
+    var aid = attendantPermissionsObjs[attendantSelectedIndex].aid;
+    var card = document.getElementById('loadingCard');
+    card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+  $('#removeAttedantModal').modal('hide');
+   var transactionFunctionCall = firebase.functions().httpsCallable('removeAttendantForOperator');
+    transactionFunctionCall({attendantID: aid}).then(function(result) {
+      // Read result of the Cloud Function.
+      var result = result.data.result;
+          console.log(result);
+          showSuccessModal('Successfully removed attendant');
+          getAttendants();
+
+
+
+
+
+    // [START catchError]
+    }).catch(function(error) {
+      // Getting the Error details.
+      var message = error.message;
+      showErrorMessageWithMessage(message);
+      //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+          //+ code + '\nError Message:' + message + '\nError Details:' + details);
+      
+      
+      
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function addAttendanttoDB()
+{
+  
+  var card = document.getElementById('loadingCard');
+    card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+  
+  var firstNameTextField = document.getElementById("firstNameTextField");
+  var lastNameTextField = document.getElementById("lastNameTextField");
+  var emailTextField = document.getElementById("emailTextField");
+  
+
+var permissionObj = {granteeEmail: emailTextField.value,
+                    firstName: firstNameTextField.value,
+                    lastName: lastNameTextField.value
+                  };
+
+
+
+$('#addAttendantModal').modal('hide');
+
+
+  
+   var transactionFunctionCall = firebase.functions().httpsCallable('addAttendantForOperator');
+    transactionFunctionCall(permissionObj).then(function(result) {
+      // Read result of the Cloud Function.
+      // var result = result.data.result;
+          // console.log(result);
+          
+
+          showSuccessModal('Successfully added attendant');
+          getAttendants();
+
+
+
+
+        // firebase.database().ref('permission_attendant_flat').push(permissionObj);
+
+        firstNameTextField.value = ""
+        lastNameTextField.value = ""
+        emailTextField.value = ""
+
+
+
+
+
+
+    // [START catchError]
+    }).catch(function(error) {
+      // Getting the Error details.
+      var message = error.message;
+      showErrorMessageWithMessage(message);
+      //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+          //+ code + '\nError Message:' + message + '\nError Details:' + details);
+      
+      
+      
+    });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+function promptToEditOrRemove(index)
+{
+attendantSelectedIndex = index;
+$('#removeAttedantModal').modal('show');
+
+}
+
+
+
+function showAddAttendant()
+{
+  
+  $('#addAttendantModal').modal('show');
+}
+
+
+function dismissSuccess()
+{
+  //$('#removeAttedantModal').modal('hide');
+  $('#SuccessModal').modal('hide');
+}
+
+
+function showSuccessModal(message)
+{
+  var successLabel = document.getElementById('successDescription');
+  successLabel.innerText = message
+$('#SuccessModal').modal('show');
+
+
+}
+
+
+
+
+
+function getMachines(sid)
+{
+
+
+    window.location.href = 'machines.html#!/' + sid;
+
+
+}
+
+
+
+
+
+
+function clearTable() {
+  
+
+   var Table = document.getElementById("test123");
+   console.log(Table)
+    Table.innerHTML = "";
+
+  }
+
+
+
+
+function signOut()
+{
+    console.log('signing out...');
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        console.log('signing out')
+        firebase.auth().signOut();
+        console.log('signed out')
+        // [END signout]
+      } else {
+        console.log('not signed in')
+
+  }
+}
+
+
+
+        const signout = () => {
+            auth.signOut();
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        auth.onAuthStateChanged((authData) => {
+            if (authData) {
+                console.log('Logged in')
+                App.init();
+           
+
+
+            getAttendants();
+
+              x=document.getElementsByClassName("user-name");  // Find the elements
+                  for(var i = 0; i < x.length; i++){
+                  x[i].innerText=firebase.auth().currentUser.email;    // Change the content
+                  }
+
+
+
+            } else {
+                console.log('Logged out')
+                window.location.href = 'index-2.html';
+               // $loginFormContainer.show();
+                // $homeContainer.hide();
+
+            }
+        });
+
+
+
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+   <div id="removeAttendant" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Account Selected</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Do you want to transfer funds or edit the account details?</p>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            <button onClick="showTransferFundsModal()" type="button" class="btn btn-success modal-close" >Transfer Funds</button>
+            <button onClick="editCheckingAccount()" type="button" class="btn btn-success modal-close" >Edit</button>
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+ -->
+
+
+  <div id="removeAttedantModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Confirm</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Are you sure you want to remove this attendant?</p>
+            <p>If you aren't, you can always re-add them -- better safe than sorry :)</p>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button"  onClick="dismissSuccess()" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="removeAttendant()" type="button" class="btn btn-success-shinepay modal-close" >Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="SuccessModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+  <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+      </div>
+    <div class="modal-body">
+        <div class="text-center">
+          <div class="text-success"><span class="modal-main-icon mdi mdi-check"></span></div>
+          <h3>Success</h3>
+          <p id="successDescription"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+        <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="errorModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+  <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+      </div>
+    <div class="modal-body">
+        <div class="text-center">
+          <div class="text-danger"><span class="modal-main-icon mdi mdi-close-circle-o"></span></div>
+          <h3 id="errorTitle">Something went wrong</h3>
+          <p id="errorDescription">You need at least one price on the machine.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+        <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="addAttendantModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add Attendant Permission</h4>
+
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter information below to add the attendant:</p>
+            <p>This allows attendants to access ShineAttendant</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Attendant first name</label>
+                          <input id="firstNameTextField" placeholder="Jonny" class="form-control">
+                </div>
+                </div>
+
+
+                <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Attendant last name</label>
+                          <input id="lastNameTextField" placeholder="Appleseed" class="form-control">
+                </div>
+                </div>
+
+
+                <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Attendant email address</label>
+                          <input id="emailTextField" placeholder="jonny@appleseed.com" class="form-control">
+                </div>
+                </div>
+        
+
+
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="addAttendanttoDB()" type="button" class="btn btn-success-shinepay modal-close" >Add Attendant</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Mirrored from shinepay.io/attendants.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:16:19 GMT -->
+</html>

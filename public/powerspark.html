@@ -1,0 +1,3139 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from shinepay.io/powerspark.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:16:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>ShineInsights</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/lib/datatables/datatables.net-bs4/css/dataTables.bootstrap4.css"/>    
+    <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper">
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a href="index-2.html" class="navbar-brand"></a>
+          </div>
+          <div class="be-right-navbar">
+
+                <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name"></span></a>
+                <div role="menu" class="dropdown-menu">     
+                  <div class="user-info">
+                    <div class="user-name"></div>
+                    
+                  </div>
+                  <a onClick="signOut()" class="dropdown-item"><span class="icon mdi mdi-power"></span> Logout</a>
+                </div>
+              </li>
+            </ul>
+          
+            
+  
+
+          <ul class="nav navbar-nav float-right be-icons-nav">
+              
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon fas fa-th"></i></a>
+                <ul class="dropdown-menu be-connections">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        
+                          <div class="col"><a href="#" ><span>ShineInsights</span></a></div>
+                          <div class="col"><a href="#"><span>Help Center</span></a></div>
+                          
+                        
+                      </div>
+                    </div>
+                    
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+
+
+
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">ShineInsights</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements">
+                  <!-- <li class="divider">Menu</li> -->
+                  
+
+
+                      
+               
+                                    <li><a href="dashboard.html"><i class="icon fal fa-chart-line"></i><span>Dashboard</span></a>
+                  </li>               
+                  <li><a href="managemachines.html"><i class="icon fal fa-browser"></i><span>Sparks</span></a>
+                  </li>
+                  <li><a href="locations.html"><i class="icon fal fa-map-marker"></i><span>Locations</span></a>
+                  </li>
+                  <li><a href="transactions.html"><i class="icon fal fa-list-alt"></i><span>Transactions</span></a>
+                  </li>
+                  <li><a href="reports.html"><i class="icon fal fa-chart-pie"></i><span>Reports</span></a>
+                  </li>
+                  <li><a href="refunds.html"><i class="icon fal fa-receipt"></i></i><span>Refunds</span></a>
+                  </li>
+                  <li><a href="customers.html"><i class="icon fal fa-users"></i><span>Customers</span></a>
+                  </li>
+                  <li><a href="attendants.html"><i class="icon fal fa-user-tag"></i><span>Attendants</span></a>
+                  </li>
+                  <li><a href="kiosk.html"><i class="icon fal fa-tablet-alt"></i><span>Kiosk</span></a>
+                  </li>
+                  <li><a href="income.html"><i class="icon fal fa-usd-square"></i><span>Income</span></a>
+                  </li>
+                  <!-- <li><a href="discounts.html"><i class="icon fal fa-usd-square"></i><span>Discounts</span></a>
+                  </li>                   -->
+                  <li><a href="account.html"><i class="icon fal fa-cog"></i><span>Account</span></a>
+                  </li>
+                  <li><a href="help.html"><i class="icon fas fa-question-circle"></i><span>Help</span></a>
+                  </li>
+                  
+
+
+
+
+     
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="be-content">
+        <div class="page-head">
+          <h2 id="machineInfoHeader"  class="page-head-title">Power Spark</h2>
+          <button onclick="showAnalytics()"   class="btn btn-space btn-primary-right active">Analytics</button>
+          <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb page-head-nav">
+              <li class="breadcrumb-item"><a href="transactions.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="managemachines.html">Manage Sparks</a></li>
+              <li class="breadcrumb-item"><a href="#">Power Spark</a></li>
+            </ol>
+          </nav>
+        </div>
+
+
+        <div id="loadingCard" class="main-content container-fluid be-loading">
+          
+
+            <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+
+          <div class="row">
+
+              <div class="col-lg-12">
+              <div class="card card-border-color card-border-color-primary">
+                
+                <div id="machineIDHeader"  class="card-header card-header-divider">Spark Info<span class="card-subtitle"></span></div>
+                <div id="sparkInfoSection" class="card-body">
+                  
+   
+
+
+                  <div class="form-group row">
+
+                        <label for="inputText3" class="col-12 col-lg-2 col-form-label text-sm-left">Location*</label>
+                        <!-- <div class="col-12 col-sm-8 col-lg-3"> -->
+                      <div class="col-12 col-sm-8 col-lg-6">
+                        <select  onchange="newStoreSelectedHandler(this)" id="locationSelectionBox" class="select2" tabindex="-1" aria-hidden="false"></select>
+                      </div>
+                      <button onClick="showAddLocationModal(this)" align="center" class="btn btn-space btn-secondary">Add New Location</button>
+
+                  </div>
+                
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="form-group row">
+                  <label for="inputText3" class="col-12 col-lg-2 col-form-label text-sm-left">Pricing Mode</label>
+                  <div class="col-12 col-sm-8 col-lg-6">
+                    <select  onchange="pricingModeDropDownHandler(this)" id="pricingModeDropDown" class="select2" tabindex="-1" aria-hidden="false">
+                      <optgroup label="ChargeSpark Pricing Mode">
+                        <option value="1">Time/Usage</option>
+                        <option value="2">Access Control</option>
+                        
+                        
+                        <!-- <option value=4>PowerSpark</option> -->
+
+                      </optgroup>
+                    </select>
+
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+            
+                
+                
+                
+                
+                
+                
+                
+                
+
+                <div   class="card-header card-header-divider">Pricing & Modes<span class="card-subtitle"></span></div>
+                  <!--colors-->
+                  
+                  <div id="modesSection" class="card">
+                    <!-- JAVASCRIPT FILLS THIS IN -->
+                  
+                  </div>
+
+
+
+
+                  <div   class="card-header card-header-divider">Additional Settings<span class="card-subtitle"></span></div>
+                  <div id="sparkInfoSection" class="card-body">
+                    
+                    <div class="form-group row">
+                      <label for="chargeSparkNotesTextField" class="col-12 col-lg-2 col-form-label text-sm-left">Notes</label>
+                      <div class="col-12 col-sm-8 col-lg-6">
+                        <textarea id="chargeSparkNotesTextField" class="form-control"></textarea>
+
+                      </div>
+                      
+                    </div>
+                    <button onclick="deleteMachineShowModal()" class="btn btn-space btn-danger active" >Delete Machine</button>
+                      
+                      &nbsp;&nbsp;&nbsp; 
+    
+
+                </div>
+
+
+
+                
+                
+                
+                
+                
+                
+                
+            
+
+
+
+                  
+                    <!--colors-->
+                    <div id="accessSection"  class="card">
+                      <!-- <div class="card-header card-header">Pricing and Modes<span ></span>
+                        <label  onClick="copyMachinePricing()" class="col-form-label-shinepay text-sm-right-right">Copy Pricing to other Machines</label>
+                      </div> -->
+
+                      <div class="card-body">
+                  
+      
+
+
+
+                        <div id="timeOfDayRestrictionsOption2" class="form-group row">
+                          <label for="inputText3" class="col-12 col-lg-2 col-form-label text-sm-left">Time of Day</label>
+                          <div class="col-sm-2">
+                            <select  onchange="timeOfDayDropDownHandler(this)" id="timeOfDayDropDown" class="select2" tabindex="-1" aria-hidden="false">
+                              <optgroup label="Time of Day Restrictions">
+                                <option value=1>Unrestriction</option>
+                                <option value=2>Restricted</option>
+                                
+                                <!-- <option value=4>PowerSpark</option> -->
+          
+                              </optgroup>
+                            </select>
+          
+                          </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                          
+                          <label  id="betweenLabel" for="betweenDropDown" class="col-sm-1">Between</label>
+                          <div class="col-sm-2">
+                            
+                            <select id="betweenDropDown"  onchange="startTimeDropDownHandler(this)" class="select2" aria-hidden="false">
+                              <optgroup label="">
+                                <option value=0>12:00AM</option>
+                                <option value=1>1:00AM</option>
+                                <option value=2>2:00AM</option>
+                                <option value=3>3:00AM</option>
+                                <option value=4>4:00AM</option>
+                                <option value=5>5:00AM</option>
+                                <option value=6>6:00AM</option>
+                                <option value=7>7:00AM</option>
+                                <option value=8>8:00AM</option>
+                                <option value=9>9:00AM</option>
+                                <option value=10>10:00AM</option>
+                                <option value=11>11:00AM</option>
+                                <option value=12>12:00PM</option>
+                                <option value=13>1:00PM</option>
+                                <option value=14>2:00PM</option>
+                                <option value=15>3:00PM</option>
+                                <option value=16>4:00PM</option>
+                                <option value=17>5:00PM</option>
+                                <option value=18>6:00PM</option>
+                                <option value=19>7:00PM</option>
+                                <option value=20>8:00PM</option>
+                                <option value=21>9:00PM</option>
+                                <option value=22>10:00PM</option>
+                                <option value=23>11:00PM</option>
+                              </optgroup>
+                            </select>
+                          </div>
+    
+    
+    
+    
+                          <label id="andLabel" for="andDropDown" class="col-sm-1">and</label>
+                          <div class="col-sm-2">
+                            <select id="andDropDown"  onchange="endTimeDropDownHandler(this)"  class="select2" aria-hidden="false">
+                              <optgroup label="">
+                                <option value=0>12:00AM</option>
+                                <option value=1>1:00AM</option>
+                                <option value=2>2:00AM</option>
+                                <option value=3>3:00AM</option>
+                                <option value=4>4:00AM</option>
+                                <option value=5>5:00AM</option>
+                                <option value=6>6:00AM</option>
+                                <option value=7>7:00AM</option>
+                                <option value=8>8:00AM</option>
+                                <option value=9>9:00AM</option>
+                                <option value=10>10:00AM</option>
+                                <option value=11>11:00AM</option>
+                                <option value=12>12:00PM</option>
+                                <option value=13>1:00PM</option>
+                                <option value=14>2:00PM</option>
+                                <option value=15>3:00PM</option>
+                                <option value=16>4:00PM</option>
+                                <option value=17>5:00PM</option>
+                                <option value=18>6:00PM</option>
+                                <option value=19>7:00PM</option>
+                                <option value=20>8:00PM</option>
+                                <option value=21>9:00PM</option>
+                                <option value=22>10:00PM</option>
+                                <option value=23>11:00PM</option>
+                              </optgroup>
+                            </select>
+                          </div>
+    
+    
+    
+    
+
+
+
+
+                          
+                          <div class="col-sm-2">
+                            <select id="timeOfWeekDropDown" onchange="timeOfWeekDropDownHandlder(this)" class="select2" aria-hidden="false">
+                              <optgroup label="">
+                                <option value="weekdays">Weekdays</option>
+                                <option value="weekends">Weekends</option>
+                                                           
+                              </optgroup>
+                            </select>
+                          </div>
+    
+
+
+
+
+
+
+
+
+
+                      </div>
+                    
+
+
+
+
+
+
+                      
+          
+          
+          
+  
+          
+                      <div id="usagerRestrictions" class="form-group row">
+                        <label for="inputText3" class="col-12 col-lg-2 col-form-label text-sm-left">Usage</label>
+                        <div class="col-sm-2">
+                          <select  onchange="usageDropDownHandler(this)" id="usageDropDown" class="select2" tabindex="-1" aria-hidden="false">
+                            <optgroup label="Usage Restrictions">
+                              <option value=1>Unrestriction</option>
+                              <option value=2>Restricted</option>
+                              
+                              <!-- <option value=4>PowerSpark</option> -->
+          
+                            </optgroup>
+                          </select>
+                        </div>
+
+
+
+                        
+                        <div class="col-sm-3">
+                        <label  id="maxLabel" for="inputText33" class="col-12 col-lg-2 col-form-label text-sm-left">Max </label>
+                          <button  id="activationsButton"  onClick="howManyActivationsHandler()" class="button-transparent2">activations</button>
+          
+                        </div>
+
+
+
+
+                        <label id="perWhatLabel" for="perWhatDropDown" class="col-sm-1">Per</label>
+                        <div class="col-sm-2">
+                          
+                          <select id="perWhatDropDown" onchange="perWhatDropDownhandler(this)"   class="select2" aria-hidden="false">
+                            <optgroup label="">
+                              <option value="day">Day</option>
+                              <option value="week">Week</option>
+                              <option value="month">Month</option>
+                              <option value="year">Year</option>
+                            </optgroup>
+                          </select>
+                        </div>
+
+                        
+
+                    </div>
+          
+          
+          
+          
+          
+
+
+
+
+
+                    <div class="form-group row">
+                      <label for="customersDropDown" class="col-12 col-lg-2 col-form-label text-sm-left">Customers</label>
+                      <div class="col-sm-2">
+                        <select  onchange="customersDropDownHandler(this)" id="customersDropDown" class="select2" tabindex="-1" aria-hidden="false">
+                          <optgroup label="Customer Restrictions">
+                            <option value=1>Unrestriction</option>
+                            <option value=2>Restricted</option>
+                            <!-- <option value=4>PowerSpark</option> -->
+                          </optgroup>
+                        </select>
+                      </div>
+
+
+
+
+
+                    
+                      <label id="customerListsLabel" for="customerListDropDown2" class="col-12 col-lg-2 col-form-label text-sm-left">Customer List</label>
+                      <div class="col-sm-3">
+                        <select  onclick="customerListDropDownHandler(this)" id="customerListDropDown2" class="select2" tabindex="-1" aria-hidden="false">
+                          <optgroup label="Customer Lists">
+                            <!-- JAVASCRIPT FILLS IN THIS -->
+                          </optgroup>
+                        </select>
+                      </div>
+
+
+                      <div class="col-sm-3">
+                        
+                          <button  id="addNewCustomerListButton" onClick="addNewCustomerListButtonHandler()" class="button-transparent2">Add New Customer List</button>
+          
+                        </div>
+
+                        
+
+
+
+                  </div>
+
+
+                  
+                  
+  
+  
+                      </div>
+                    </div>
+               
+                    
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+
+    <script src="assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+    <script src="assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-loaders.js" type="text/javascript"></script>
+    <script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+
+        chargeSparkSettingsDict["perKWHPrice"] = -1;
+        chargeSparkSettingsDict["perHourPrice"] = -1;
+        chargeSparkSettingsDict['isCustomAmountEnabled'] = false;
+
+
+        document.getElementById("betweenLabel").style.display = "none";
+        document.getElementById("betweenDropDown").style.display = "none";
+        document.getElementById("andLabel").style.display = "none";
+        document.getElementById("andDropDown").style.display = "none";
+        document.getElementById("timeOfWeekDropDown").style.display = "none";
+        
+
+
+
+
+        document.getElementById('pricePerHourUpdateButton').style.visibility = 'hidden';
+
+        
+        
+
+        document.getElementById("maxLabel").style.display = "none";
+        document.getElementById("activationsButton").style.display = "none";
+        document.getElementById("perWhatLabel").style.display = "none";
+        document.getElementById("perWhatDropDown").style.display = "none";
+        
+
+
+      document.getElementById("customerListsLabel").style.display = "none";
+      document.getElementById("customerListDropDown2").style.display = "none";
+      document.getElementById("addNewCustomerListButton").style.display = "none";
+
+
+
+          numberOfPricingOptions= 1;
+    
+
+
+                        // $("#sparkTypeDropDown").select2({
+                        //   width: '100%'
+                        // });
+
+
+
+
+
+
+
+                      
+   
+                        
+        
+      });
+
+
+
+  var config = {
+    apiKey: "AIzaSyBi9uQZExymWoOz47IoGoxZ4DEOWpaAZNk",
+    authDomain: "smartpay-bc639.firebaseapp.com",
+    databaseURL: "https://smartpay-bc639-default-rtdb.firebaseio.com",
+    projectId: "smartpay-bc639",
+    storageBucket: "smartpay-bc639.firebasestorage.app",
+    messagingSenderId: "52960112231"
+  };
+
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        
+        const functions = firebase.functions();
+
+
+var machineID;
+var numberOfPricingOptions;
+var storesArray;
+var storeLocationSelectedIndex = 0;
+var chargeSparkSettingsDict = {};
+var machineDict = {};
+
+function addCustomerListToDB(listName)
+{
+
+
+  
+
+
+  var transactionFunctionCall = firebase.functions().httpsCallable('addCustomerAccessListForOperator');
+        transactionFunctionCall({listName:listName }).then(function(result) {
+
+
+        var card = document.getElementById('loadingCard');
+        card.setAttribute('class' , 'main-content container-fluid be-loading');
+          // Read result of the Cloud Function.
+          result = result.data;
+          
+
+          
+
+
+          
+            window.location.href = 'addaccesscontroluserlist.html#!/' + result.listKey; 
+          
+
+
+
+        }).catch(function(error) {
+          // Getting the Error details.
+          var message = error.message;
+    showErrorMessageWithMessage(message);
+
+
+          
+          
+          
+        });
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function startTimeDropDownHandler(item)
+{
+  var valuKeyPair = {value: parseInt(item.value),
+                    machineID:machineID,
+                  key: "fromTimeOfDay"};
+
+  updateMachineData(machineID, valuKeyPair);
+
+}
+
+
+
+
+
+
+
+
+function endTimeDropDownHandler(item)
+{
+
+
+  var valuKeyPair = {value: parseInt(item.value),
+                    machineID:machineID,
+                  key: "toTimeOfDay"};
+
+  updateMachineData(machineID, valuKeyPair);
+  
+
+}
+
+
+
+function timeOfWeekDropDownHandlder(item)
+{
+  var valuKeyPair = {value: item.value,
+                    machineID:machineID,
+                  key: "timeOfWeek"};
+
+  updateMachineData(machineID, valuKeyPair);
+  
+
+}
+
+
+
+function perWhatDropDownhandler(item)
+{
+
+  var valuKeyPair = {value: item.value,
+                    machineID:machineID,
+                  key: "perWhat"};
+
+  updateMachineData(machineID, valuKeyPair);
+
+}
+
+
+function deleteMachineShowModal()
+{
+
+  
+  machineWordingObj = document.getElementById('removeMachineWording')
+  machineWordingObj.innerHTML = 'Are you sure you want to permenantly remove machine ' + machineID.toString() + '?'
+  $('#confirmDeletingOfMachineModal').modal('show');
+  
+  
+}
+
+
+
+
+
+
+
+
+
+function deleteMachineButtonHandler()
+{
+
+console.log(machineID);
+
+
+
+var data = {machineID: machineID};
+var card = document.getElementById('loadingCard');
+          card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('removeMachineForOperator');
+  transactionFunctionCall(data).then(function(result) {
+
+
+    var card = document.getElementById('loadingCard');
+          card.setAttribute('class' , 'main-content container-fluid be-loading');
+        window.location.href = 'managemachines.html';
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var message = error.message;
+    showErrorMessageWithMessage(message);
+
+        
+  });
+
+
+
+
+}
+
+
+function showAnalytics()
+{
+
+  window.location.href = 'machineanalytics.html#!/' + machineID; 
+
+  
+}
+
+function createNewCustomerListButtonHandler()
+{
+//Get the name
+//add the list to the backend
+//move to addcustomerrcontroluselist.html
+
+var listName = document.getElementById('nameOfCustomerListTextField').value;
+$('#addCustomerListModal').modal('hide');
+
+addCustomerListToDB(listName);
+document.getElementById('nameOfCustomerListTextField').value = '';
+
+}
+
+
+function addNewCustomerListButtonHandler()
+{
+
+  
+  $('#addCustomerListModal').modal('show');
+
+}
+
+function timeOfDayDropDownHandler(item)
+{
+
+      if(item.value == 1)
+      { 
+        //unrestricted
+        
+        document.getElementById("betweenLabel").style.display = "none";
+        
+        document.getElementById("andLabel").style.display = "none";
+        
+        $('#betweenDropDown').select2('destroy');
+        document.getElementById("betweenDropDown").style.display = "none";
+        $('#andDropDown').select2('destroy');
+        document.getElementById("andDropDown").style.display = "none";
+        $('#timeOfWeekDropDown').select2('destroy');
+        document.getElementById("timeOfWeekDropDown").style.display = "none";
+
+
+        var valuKeyPair = {value: false,
+                    machineID:machineID,
+                  key: "isTimeOfDayRestricted"};
+
+        updateMachineData(machineID, valuKeyPair);
+
+        
+      }
+      else
+      {
+        //restricted
+
+        document.getElementById("betweenLabel").style.display = "block";
+        document.getElementById("betweenDropDown").style.display = "block";
+        document.getElementById("andLabel").style.display = "block";
+        document.getElementById("andDropDown").style.display = "block";
+        document.getElementById("timeOfWeekDropDown").style.display = "block";
+                        $("#betweenDropDown").select2({
+                          width: '100%',
+                        });
+      
+
+                        $("#andDropDown").select2({
+                          width: '100%',    
+                        });   
+
+
+
+                        $("#timeOfWeekDropDown").select2({
+                          width: '100%',    
+                        });
+
+
+                  var valuKeyPair = {value: true,
+                                    machineID:machineID,
+                                    key: "isTimeOfDayRestricted"};
+
+                    updateMachineData(machineID, valuKeyPair);  
+
+                        
+
+      }
+
+
+
+
+
+
+}
+
+
+
+function usageDropDownHandler(item)
+{
+    //TODO: If restricted show customer list drop down
+    if(item.value == 1)
+    { 
+      //unrestricted
+      console.log('unrestricted');
+
+        document.getElementById("maxLabel").style.display = "none";
+        document.getElementById("activationsButton").style.display = "none";
+        document.getElementById("perWhatLabel").style.display = "none";
+        $('#perWhatDropDown').select2('destroy');
+        document.getElementById("perWhatDropDown").style.display = "none";
+        
+        var valuKeyPair = {value: false,
+                                    machineID:machineID,
+                                    key: "isUsageRestricted"};
+
+                    updateMachineData(machineID, valuKeyPair);  
+
+
+
+    }
+    else
+    {
+      //restricted
+      console.log('restricted');
+      document.getElementById("maxLabel").style.display = "block";  
+      document.getElementById("activationsButton").style.display = "block";
+      
+      document.getElementById("perWhatLabel").style.display = "block";
+        document.getElementById("perWhatDropDown").style.display = "block";
+        
+
+        $("#perWhatDropDown").select2({
+                          width: '100%'
+                        });
+
+                        var valuKeyPair = {value: true,
+                                    machineID:machineID,
+                                    key: "isUsageRestricted"};
+
+                    updateMachineData(machineID, valuKeyPair);  
+
+        
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+function betweenDropDownHandler(item)
+{
+console.log(item.value.toString());
+
+
+}
+
+
+
+function customersDropDownHandler(item)
+{
+
+
+    //TODO: If restricted show customer list drop down
+    if(item.value == 1)
+    { 
+      //unrestricted
+      console.log('unrestricted');
+      document.getElementById("customerListsLabel").style.display = "none";
+      $('#customerListDropDown2').select2('destroy');
+      document.getElementById("customerListDropDown2").style.display = "none";
+      document.getElementById("addNewCustomerListButton").style.display = "none";
+
+      var valuKeyPair = {value: false,
+                                    machineID:machineID,
+                                    key: "isCustomerAccessRestricted"};
+
+                    updateMachineData(machineID, valuKeyPair);  
+
+
+    }
+    else
+    {
+      //restricted
+      console.log('restricted');
+      document.getElementById("customerListsLabel").style.display = "block";
+      document.getElementById("customerListDropDown2").style.display = "block";
+      document.getElementById("addNewCustomerListButton").style.display = "block";
+
+
+      var valuKeyPair = {value: true,
+                                    machineID:machineID,
+                                    key: "isCustomerAccessRestricted"};
+
+                    updateMachineData(machineID, valuKeyPair);  
+      
+
+      $("#customerListDropDown2").select2({
+                          width: '100%'
+                        });
+
+    }
+
+
+
+
+
+
+}
+
+
+function customerListDropDownHandler(item)
+{
+
+  console.log('hello')
+    if(item.selectedIndex == 0)
+    {
+      window.location.href = 'addaccesscontroluserlist.html';
+      
+    }
+
+}
+
+
+function howManyActivationsHandler()
+{
+
+
+$('#setNumberOfUsageActivationsModal').modal('show');
+}
+
+
+
+
+
+function createAccessControlForm()
+{
+  console.log('access control');
+
+  createAccessControlUI();
+  
+
+                        
+
+  var pricingAndModesSection = document.getElementById("pricingAndModesSection");
+  var accessSection = document.getElementById("accessSection");
+  var modesSection = document.getElementById("modesSection");
+  
+  // pricingAndModesSection.innerHTML =  '';
+  // pricingAndModesSection.innerHTML = accessSection.innerHTML;
+  modesSection.innerHTML = accessSection.innerHTML;
+
+  $("#customersDropDown").select2({
+                          width: '100%'
+                        });   
+
+
+  $("#timeOfDayDropDown").select2({
+    width: '100%'
+  });
+
+
+  $("#usageDropDown").select2({
+    width: '100%'
+  });
+
+
+  $("#customerListDropDown").select2({
+                          width: '100%'
+                        });
+
+
+
+
+
+
+}
+
+
+
+
+function createPaidControlForm()
+{
+
+console.log('usage');
+
+var pricingAndModesSection = document.getElementById("pricingAndModesSection");
+  var usageSection = document.getElementById("usageSection");
+  var modesSection = document.getElementById("modesSection");
+  
+  
+  modesSection.innerHTML = usageSection.innerHTML;
+
+
+
+
+}
+
+
+
+
+function pricingModeDropDownHandler(item)
+{
+    if(item.value == 1)
+    {
+      //usage
+      numberOfPricingOptions=1
+      createPaidControlForm();
+      var pricesArray = machineDict.prices;
+      // if()
+      addNewPricingOption();
+      
+
+
+    }
+    else if(item.value == 2)
+    {
+      //access control
+      createAccessControlForm();
+
+
+    }
+
+
+  console.log('got here');
+}
+
+
+
+function createAccessControlUI()
+{
+
+
+
+
+var pricingModesBody = document.getElementById('pricingModesBody');
+pricingModesBody.innerHTML = '';
+
+var pricingOptionDiv = document.createElement('div');
+pricingOptionDiv.setAttribute('class',"form-group row");
+
+
+var label1 = document.createElement("label");
+label1.setAttribute('class',"col-12 col-lg-2 col-form-label text-sm-left");
+label1.innerText = "Pricing Option 1";
+pricingOptionDiv.appendChild(label1);
+
+pricingModesBody.appendChild(pricingOptionDiv)
+
+}
+
+
+
+
+// function addNewPricingOption()
+// {
+
+// numberOfPricingOptions++;
+
+
+// var pricingModesBody = document.getElementById('pricingModesBody');
+// var pricingOptionDiv = document.createElement('div');
+// pricingOptionDiv.setAttribute('class',"form-group row");
+
+
+// var label1 = document.createElement("label");
+// label1.setAttribute('class',"col-12 col-lg-2 col-form-label text-sm-left");
+// label1.innerText = "Pricing Option 1";
+// pricingOptionDiv.appendChild(label1);
+
+
+
+
+
+// var inputPricingDiv1 = document.createElement('div');
+// inputPricingDiv1.setAttribute('class',"col-12 col-sm-8 col-lg-3");
+// var textInput1 = document.createElement("input");
+// textInput1.setAttribute('class',"form-control");
+// textInput1.setAttribute('id',"pricingOption" + numberOfPricingOptions.toString());
+// textInput1.innerText = "Pricing Option 1";
+// inputPricingDiv1.appendChild(textInput1)
+// pricingOptionDiv.appendChild(inputPricingDiv1);
+
+
+
+// var label2 = document.createElement("label");
+// label2.setAttribute('class',"col-12 col-lg-2 col-form-label text-sm-left");
+// label2.innerText = "Mode";
+// pricingOptionDiv.appendChild(label2);
+
+
+
+// var inputPricingDiv2 = document.createElement('div');
+// inputPricingDiv2.setAttribute('class',"col-12 col-sm-8 col-lg-3");
+// var textInput1 = document.createElement("input");
+// textInput1.setAttribute('class',"form-control");
+// textInput1.innerText = "Pricing Option 1";
+// inputPricingDiv2.appendChild(textInput1)
+// pricingOptionDiv.appendChild(inputPricingDiv2);
+
+
+
+
+
+// pricingModesBody.appendChild(pricingOptionDiv)
+
+
+
+
+//   console.log('got here')
+// }
+
+
+
+function dismissSuccess()
+{
+  $('#SuccessModal').modal('hide');
+}
+
+
+function showSuccessModal()
+{
+
+$('#SuccessModal').modal('show');
+
+}
+
+
+
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+
+var accessLists = [];
+function getCustomerAccessControlLists()
+{
+var dict = {};
+
+  var transactionFunctionCall = firebase.functions().httpsCallable('getAccessListsForOperator');
+        transactionFunctionCall(dict).then(function(result) {
+
+
+        var card = document.getElementById('loadingCard');
+        card.setAttribute('class' , 'main-content container-fluid be-loading');
+          // Read result of the Cloud Function.
+          accessLists = result.data.accessLists;
+          
+
+          for(var i =0; i<accessLists.length; i++)
+          {
+            console.log(accessLists[i].key)
+            addRowInList('customerListDropDown2' , accessLists[i].listName);
+            if(machineDict.accessControlList === accessLists[i].key)
+            {
+              console.log(accessLists[i].listName +  ' matches');
+              document.getElementById('customerListDropDown2').value = accessLists[i].listName;
+            }
+            
+
+            
+
+          }
+          
+
+          if(document.getElementById("customerListDropDown2").style.display == "block")
+          {
+
+            $("#customerListDropDown2").select2({
+                          width: '100%'
+                        });
+
+          }
+        
+
+
+
+
+
+
+        }).catch(function(error) {
+          // Getting the Error details.
+          var message = error.message;
+    showErrorMessageWithMessage(message);
+
+
+          
+          
+          
+        });
+
+
+
+}
+
+function showUpdateButton()
+{
+
+  
+  document.getElementById('pricePerHourUpdateButton').style.visibility = 'visible';
+}
+
+
+function addSparkWithAccessControl()
+{
+  var accessControlDict = {};
+
+  // check if  time of day is restricted/unrestricted
+  // check if  usage is restricted/unrestricted
+  // check if  Customers is restricted/unrestricted
+  console.log('adding spark with access control');
+  var card = document.getElementById('loadingCard');
+          card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+  // TODO: add machine ID
+  // TODO: Add location key
+  
+
+  var timeOfDayDropDown = document.getElementById('timeOfDayDropDown');
+  var usageDropDown = document.getElementById('usageDropDown');
+  var customersDropDown = document.getElementById('customersDropDown');
+
+
+  var betweenDropDown = document.getElementById('betweenDropDown');
+  var andDropDown = document.getElementById('andDropDown');
+  var timeOfWeekDropDown = document.getElementById('timeOfWeekDropDown');
+  var perWhatDropDown = document.getElementById('perWhatDropDown');
+
+  var machineIDText = document.getElementById('machineIDTextField');
+  var machineID = machineIDText.value;
+  console.log()
+
+
+  var chargeSparkNotesTextField = document.getElementById('chargeSparkNotesTextField');
+  accessControlDict['sparkNotes'] = chargeSparkNotesTextField.innerHTML;
+console.log('notes: ' + chargeSparkNotesTextField.innerHTML);
+  
+  var storeSelectedIndex =   document.getElementById("locationSelectionBox").selectedIndex
+  console.log((storesArray[storeLocationSelectedIndex]).sid);
+
+  var customerListDropDown2 = document.getElementById('customerListDropDown2');
+
+  accessControlDict['machineID'] = machineIDText.value;
+  accessControlDict['locationID'] = (storesArray[storeLocationSelectedIndex]).sid;
+
+
+
+if(timeOfDayDropDown.selectedIndex == 1) //restricted 
+{
+    console.log('time of day restrictions applied')
+
+
+    if(betweenDropDown.value > andDropDown.value)
+    {
+      console.log("Start time can't be in the past");
+      // var card = document.getElementById('loadingCard');
+          card.setAttribute('class' , 'main-content container-fluid be-loading');
+          var errorLabel = document.getElementById('errorDescription');
+            errorLabel.innerText = "Start time can't be in the past"
+          $('#errorModal').modal('show');
+      
+
+
+    }
+    else
+    {
+      accessControlDict['isTimeOfDayRestricted'] = true;
+      accessControlDict['fromTimeOfDay'] = betweenDropDown.value 
+      accessControlDict['toTimeOfDay'] = andDropDown.value
+      accessControlDict['timeOfWeek'] = timeOfWeekDropDown.value;
+      
+
+    }
+
+
+}
+else
+{
+  accessControlDict['isTimeOfDayRestricted'] = false;
+}
+
+
+
+
+
+
+
+
+if(usageDropDown.selectedIndex == 1) //restricted 
+{
+
+  accessControlDict['isUsageRestricted'] = true;
+  accessControlDict['maxNumberOfActivations'] = maxNumberOfActivations;
+  accessControlDict['perWhat'] = perWhatDropDown.value;
+  
+
+
+}
+else
+{
+  accessControlDict['isUsageRestricted'] = false;
+
+}
+
+
+
+
+if(customersDropDown.selectedIndex == 1) //restricted 
+{
+
+  accessControlDict['accessControlList'] = accessLists[customerListDropDown2.selectedIndex].key;
+  accessControlDict['isCustomerAccessRestricted'] =true;
+
+
+}
+else
+{
+  accessControlDict['isCustomerAccessRestricted'] =false;
+}
+
+
+
+
+
+
+  
+for(key in accessControlDict)
+{
+  console.log( key + ' : ' + accessControlDict[key]);
+}
+
+
+  
+var transactionFunctionCall = firebase.functions().httpsCallable('addChargeSparkWithAccessControlForOperator');
+        transactionFunctionCall(accessControlDict).then(function(result) {
+
+
+        var card = document.getElementById('loadingCard');
+        card.setAttribute('class' , 'main-content container-fluid be-loading');
+          // Read result of the Cloud Function.
+          result = result.data.result;
+
+          console.log(result);
+          console.log(result.message);
+          
+          if(result === 'error')
+          {
+            showMachineExists();  
+          }
+          else
+          {
+            showSuccessModal();
+          }
+
+        
+
+
+
+
+
+
+        }).catch(function(error) {
+          // Getting the Error details.
+          var message = error.message;
+    showErrorMessageWithMessage(message);
+
+
+          
+          
+          
+        });
+
+
+
+
+
+}
+
+
+
+
+function getMachineData()
+{
+
+
+  var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+console.log(machineID)
+var transactionFunctionCall = firebase.functions().httpsCallable('getMachineForOperator');
+  transactionFunctionCall({machineID: machineID}).then(function(result) {
+    // Read result of the Cloud Function.
+    machineDict = result.data.machine;
+    getOperatorLocations();
+    
+    var locationSelectionBox = document.getElementById('locationSelectionBox');
+    var machineInfoHeader = document.getElementById('machineIDHeader');
+    var pricePerHourTextField = document.getElementById('pricePerHourTextField');
+    
+    var setPerHourPricingButton = document.getElementById('setPerHourPricingButton');
+    var setPerKWHPricingButton = document.getElementById('setPerKWHPricingButton');
+    
+    
+      
+    var perHourPriceStr = (machineDict.pricePerHour/100.0).toFixed(2);
+console.log(perHourPriceStr)
+    // setPerHourPricingButton.innerHTML =  '$' + perHourPriceStr + ' Per Hour' ;
+    // setPerKWHPricingButton.innerHTML =  '$' + ((machineDict.pricePerKiloWattHourInCents/100.0).toFixed(2)) + ' Per KWh' ;
+
+    machineInfoHeader.innerHTML = 'Spark ' + machineID + ' information';
+
+ 
+
+                  document.getElementById("accessSection").style.display = "none";
+                  document.getElementById("usageSection").style.display = "none";
+
+    var pricingModeDropDown1 = document.getElementById('pricingModeDropDown');
+
+
+    pricingModeDropDown1.disabled = true;
+    if(machineDict.sparkType === 'power')
+    {
+      
+      pricingModeDropDown1.selectedIndex =0;
+      createPaidControlForm();
+      var pricesArray = machineDict.price;
+      var locationSelectionBox = document.getElementById('locationSelectionBox');
+    var machineInfoHeader = document.getElementById('machineInfoHeader');
+    var pricePerHourTextField = document.getElementById('pricePerHourTextField');
+
+    
+    // machineInfoHeader.innerHTML = 'Power Spark ' + machineID;
+      pricePerHourTextField.value = (machineDict.pricePerHour/100.0).toFixed(2); 
+    
+card.setAttribute('class' , 'main-content container-fluid be-loading');
+// getOperatorLocations();
+
+$("#timeDivisionDropDown").select2({
+                          width: '100%'
+                        });
+
+      
+     
+    }
+    else if(machineDict.sparkType === 'power_access' )
+    {
+      
+      
+      pricingModeDropDown1.selectedIndex = 1;
+      createAccessControlForm();
+
+
+
+
+      if(machineDict.isUsageRestricted == true)
+      {
+        var usageDropDown = document.getElementById('usageDropDown');
+      usageDropDown.selectedIndex = 1;
+
+
+      var activationsButton = document.getElementById('activationsButton');
+      activationsButton.innerHTML = machineDict.maxNumberOfActivations +  ' activations';
+
+      if(machineDict.perWhat === 'day')
+      {
+        document.getElementById("perWhatDropDown").selectedIndex = 0;
+
+      }
+      else if(machineDict.perWhat === 'week')
+      {
+        document.getElementById("perWhatDropDown").selectedIndex = 1;
+
+      }
+      else if(machineDict.perWhat === 'month')
+      {
+        document.getElementById("perWhatDropDown").selectedIndex = 2;
+
+      }
+      else if(machineDict.perWhat === 'year')
+      {
+        document.getElementById("perWhatDropDown").selectedIndex = 3;
+
+      }
+
+      document.getElementById("maxLabel").style.display = "block";  
+      document.getElementById("activationsButton").style.display = "block";
+      
+      document.getElementById("perWhatLabel").style.display = "block";
+        document.getElementById("perWhatDropDown").style.display = "block";
+        
+
+        $("#perWhatDropDown").select2({
+                          width: '100%'
+                        });
+
+
+      }
+      else
+      {
+        var usageDropDown = document.getElementById('usageDropDown');
+      usageDropDown.selectedIndex = 0;
+
+      }
+      // usageDropDownHandler(usageDropDown);
+
+
+
+      if(machineDict.isTimeOfDayRestricted == true)
+      {
+        var timeOfDayDropDown = document.getElementById('timeOfDayDropDown');
+        var timeOfWeekDropDown = document.getElementById("timeOfWeekDropDown");
+        var andDropDown = document.getElementById("andDropDown");
+        var betweenDropDown = document.getElementById("betweenDropDown");
+
+
+        if(machineDict.timeOfWeek === "weekdays")
+        {
+          timeOfWeekDropDown.selectedIndex = 0;
+        }
+        else
+        {
+          timeOfWeekDropDown.selectedIndex = 1;
+        }
+        
+
+        betweenDropDown.value = machineDict.fromTimeOfDay;
+        andDropDown.value = machineDict.toTimeOfDay;
+
+
+    
+        
+        timeOfDayDropDown.selectedIndex = 1;
+
+        document.getElementById("betweenLabel").style.display = "block";
+        document.getElementById("betweenDropDown").style.display = "block";
+        document.getElementById("andLabel").style.display = "block";
+        document.getElementById("andDropDown").style.display = "block";
+        document.getElementById("timeOfWeekDropDown").style.display = "block";
+                        $("#betweenDropDown").select2({
+                          width: '100%',
+                        });
+      
+
+                        $("#andDropDown").select2({
+                          width: '100%',    
+                        });   
+
+
+                        
+
+
+                        $("#timeOfWeekDropDown").select2({
+                          width: '100%',    
+                        });
+
+
+      }
+      else
+      {
+        var timeOfDayDropDown = document.getElementById('timeOfDayDropDown');
+        timeOfDayDropDown.selectedIndex = 0;
+      }
+
+      // timeOfDayDropDownHandler(timeOfDayDropDown);
+
+
+
+      if(machineDict.isCustomerAccessRestricted == true)
+      {
+        var customersDropDown = document.getElementById('customersDropDown');
+        customersDropDown.selectedIndex = 1;
+        document.getElementById("customerListsLabel").style.display = "block";
+      document.getElementById("customerListDropDown2").style.display = "block";
+      document.getElementById("addNewCustomerListButton").style.display = "block";
+
+
+
+      }
+      else
+      {
+
+//         var customersDropDown = document.getElementById('customersDropDown');
+//         customersDropDown.selectedIndex = 1;
+        // document.getElementById("customerListsLabel").style.display = "block";
+      // document.getElementById("customerListDropDown2").style.display = "block";
+//       document.getElementById("addNewCustomerListButton").style.display = "block";
+// console.log('got here to thjis truing to do thins')
+        document.getElementById("customerListsLabel").style.display = "none";
+      
+      document.getElementById("customerListDropDown2").style.display = "none";
+      document.getElementById("addNewCustomerListButton").style.display = "none";
+
+
+
+        var customersDropDown = document.getElementById('customersDropDown');
+        customersDropDown.selectedIndex = 0;
+
+
+
+
+      }
+      // customersDropDownHandler(customersDropDown);
+
+
+
+
+
+    $("#usageDropDown").select2({
+                          width: '100%'
+                        });
+     
+
+
+
+    $("#timeOfDayDropDown").select2({
+                          width: '100%'
+                        });
+
+
+
+
+
+
+    }
+
+    $("#pricingModeDropDown").select2({
+                          width: '100%'
+                        });
+    
+      
+    
+card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+
+
+//TODO: create enable slider
+//TODO: load machine ID as
+// TODO: remove machine ID text field
+// TODO: change hour/min selector box
+// TODO: update label to say Machine XXXYYY Info
+ 
+
+
+    // document.getElementById('swt4').checked = machineDict.isenabled;
+
+
+    getCustomerAccessControlLists();
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var message = error.message;
+    showErrorMessageWithMessage(message);
+
+    
+    
+    
+  });
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+var timeDivisionSelected = 0;
+function timeDivisionsDropDownHandler(item)
+{
+
+var pricePerHourTextField = document.getElementById('pricePerHourTextField');
+var pricePerHourNumber = parseFloat(pricePerHourTextField.value);
+if(timeDivisionSelected ==0 && item.selectedIndex == 1)
+{
+  pricePerHourTextField.value = pricePerHourNumber/60.0;
+}
+else if(timeDivisionSelected ==1 && item.selectedIndex == 0)
+{
+  var temp = (pricePerHourNumber*60.0).toFixed(2);
+  
+  
+  pricePerHourTextField.value = temp
+  
+}
+
+
+
+  console.log('time divisions ' + item.selectedIndex);
+  timeDivisionSelected = item.selectedIndex;
+
+}
+
+
+
+
+
+
+function showSuccess()
+{
+  $('#SuccessModal').modal('show');
+}
+
+
+
+function hideSuccess()
+{
+  $('#SuccessModal').modal('hide');
+}
+
+
+
+function showMachineExists()
+{
+  $('#machineExistsModal').modal('show');
+}
+
+
+
+function hideMachineExists()
+{
+  $('#machineExistsModal').modal('hide');
+}
+
+
+
+// var pricesArray =[];
+
+function collectAndUpdateFixedPricingOptions()
+{
+  var pricingArray = [];
+
+  for(var i =1; i<numberOfPricingOptions; i++)
+{
+  var mode = 'mode' + (i).toString();
+  var pricing = 'pricing' + (i).toString();
+
+  
+
+  if ( ($( '#' + mode).length  !=0) ||  ($( '#' + pricing).length  !=0) )
+  {
+
+  var amountText = document.getElementById(pricing);
+  var modeText = document.getElementById(mode);
+  var amount = amountText.value;
+  var mode = modeText.options[modeText.selectedIndex].text.toLowerCase();
+  console.log('amount' + amount); 
+  console.log('mode ' + mode); 
+  
+if(amount.trim() === '')
+{
+
+  var errorLabel = document.getElementById('errorDescription');
+          errorLabel.innerText = 'You need to fill in price ' + i.toString() +' to proceed.';
+        $('#errorModal').modal('show');
+  console.log('EMPTY STRING');
+  card.setAttribute('class' , 'main-content container-fluid be-loading');
+  return;
+}
+
+//TODO: if one of the fields is empty return state + error messsage
+
+  var pricingDict;
+  console.log(machineDict['pricePerKiloWattHourInCents']);
+if(mode === "kwh")
+{
+  pricingDict = {amount: parseFloat(amount),
+                      mode: mode,
+                      price: machineDict['pricePerKiloWattHourInCents']*amount};
+}
+else if(mode === "hour")
+{
+   pricingDict = {amount: parseFloat(amount),
+                      mode: mode,
+                      price: machineDict['pricePerHour']*amount};
+}
+
+
+  pricingArray.push(pricingDict);
+  }
+
+  var valuKeyPair = {value: pricingArray,
+                    machineID:machineID,
+                  key: "price"};
+
+console.log(pricingArray);
+  updateMachineData(machineID, valuKeyPair);
+
+}
+
+
+}
+
+
+
+function deleteMachinePriceHandler(id)
+{
+  
+
+
+
+  var pricingElement = document.getElementById('pricingOption' + id);
+  numberOfPricingOptions--;
+  pricingElement.parentNode.removeChild(pricingElement);
+  collectAndUpdateFixedPricingOptions();
+
+
+
+
+
+
+}
+
+
+
+function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
+
+function validateProperNumber(item)
+{
+
+  var str = item.value;
+  str = str.trim();
+  if(str=== '')
+  {
+    console.log('blank')
+    return false;
+  }
+  else if(isNumber(str))
+  {
+    console.log(str);
+    return true;
+
+  }
+  else
+  {
+        console.log('not a number');
+        var errorLabel = document.getElementById('errorDescription');
+          errorLabel.innerText = 'You entered an invalid number. Please try again.';
+        $('#errorModal').modal('show');
+        item.value = '';
+        return false;
+
+  }
+}
+
+
+function addNewPricingOption()
+{
+
+
+
+var pricingModesBody = document.getElementById('pricingModesBody');
+var pricingOptionDiv = document.createElement('div');
+pricingOptionDiv.setAttribute('class',"form-group row");
+pricingOptionDiv.setAttribute('id',"pricingOption" + numberOfPricingOptions.toString());
+
+
+
+// var label1 = document.createElement("label");
+// label1.setAttribute('class',"col-12 col-lg-2 col-form-label text-sm-left");
+// label1.innerText = "Pricing Option " +numberOfPricingOptions;
+// pricingOptionDiv.appendChild(label1);
+
+
+
+
+
+var inputPricingDiv1 = document.createElement('div');
+inputPricingDiv1.setAttribute('class',"col-sm-2");
+var textInput1 = document.createElement("input");
+textInput1.setAttribute('class',"form-control");
+textInput1.innerText = "Pricing Option " + numberOfPricingOptions;
+textInput1.setAttribute('id',"pricing" + numberOfPricingOptions.toString());
+textInput1.setAttribute('onChange',"updatedFixedPricingHandler(this)");
+inputPricingDiv1.appendChild(textInput1)
+pricingOptionDiv.appendChild(inputPricingDiv1);
+
+
+
+// var label2 = document.createElement("label");
+// label2.setAttribute('class',"col-sm-1 col-form-label text-sm-left");
+// label2.innerText = "Mode";
+// pricingOptionDiv.appendChild(label2);
+
+var inputPricingDiv2 = document.createElement('div');
+inputPricingDiv2.setAttribute('class',"col-sm-2");
+var selectInput = document.createElement("select");
+selectInput.setAttribute('class' , "select2");
+var optionElement1 =  document.createElement("option")
+optionElement1.setAttribute('value' , "1");
+optionElement1.innerHTML ='KWh'
+
+var optionElement2 =  document.createElement("option")
+optionElement2.innerHTML ='Hour'
+optionElement2.setAttribute('value' , "2");
+selectInput.setAttribute('class',"form-control");
+selectInput.setAttribute('id',"mode" + numberOfPricingOptions.toString());
+
+
+selectInput.appendChild(optionElement1)
+selectInput.appendChild(optionElement2)
+inputPricingDiv2.appendChild(selectInput)
+pricingOptionDiv.appendChild(inputPricingDiv2);
+
+if(numberOfPricingOptions != 1)
+{
+
+
+var button = document.createElement("button");
+button.setAttribute('class',"btn btn-space btn-primary-right active");
+button.setAttribute('onClick',"deleteMachinePriceHandler(" + numberOfPricingOptions.toString() + ")");
+button.innerText = "Delete";
+pricingOptionDiv.appendChild(button);
+
+}
+
+
+pricingModesBody.appendChild(pricingOptionDiv)
+
+
+$("#mode" + numberOfPricingOptions.toString()).select2({
+                          width: '100%'
+                        });
+                        
+                        
+
+numberOfPricingOptions++;
+
+
+
+}
+
+
+
+function updatedFixedPricingHandler(item)
+{
+  var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+  var outcome = validateProperNumber(item);
+  if(outcome)
+  {
+
+    collectAndUpdateFixedPricingOptions();
+
+  }
+
+
+
+}
+
+
+
+function setPerHourPricingButtonHandler()
+{
+  var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+  var price = document.getElementById('pricePerHourTextField').value;
+  // document.getElementById('setPerHourPricingButton').innerHTML =   '$' + price + ' Per Hour Pricing'
+  // $('#setHourPricingModal').modal('hide');
+  // chargeSparkSettingsDict['pricePerHour'] = Math.trunc(parseFloat(price*100) *100.0);
+
+  var valuKeyPair = {value: parseFloat(price) *100,
+                    machineID:machineID,
+                  key: "pricePerHour"};
+
+
+  updateMachineData(machineID, valuKeyPair);
+
+  
+}
+
+
+function setPerKWHPricingButtonHandler()
+{
+  var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+  console.log('setting kwh price');
+  var price = document.getElementById('machinePerKWhPricingTextField').value;
+  document.getElementById('setPerKWHPricingButton').innerHTML =   '$' + price + ' Per kWh Pricing'
+  
+  chargeSparkSettingsDict['pricePerKiloWattHourInCents'] = Math.trunc(parseFloat(price) *100);
+  document.getElementById('machinePerKWhPricingTextField').value = '';
+  $('#setPerKwHHourModal').modal('hide');
+
+var valuKeyPair = {machineID:machineID,
+                  value: chargeSparkSettingsDict['pricePerKiloWattHourInCents'],
+                  key: "pricePerKiloWattHourInCents"};
+
+
+updateMachineData(machineID, valuKeyPair);
+
+  
+
+}
+
+
+
+
+function updateMachineData(machineID, valuKeyPair )
+{
+
+console.log('machine is id' + machineID);
+
+
+var data = {machineData: valuKeyPair,
+            machineID: machineID};
+
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('updateMachineInformationForOperator');
+  transactionFunctionCall(data).then(function(result) {
+
+
+            showSuccessModal();
+
+
+            var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var message = error.message;
+    showErrorMessageWithMessage(message);
+
+    
+
+
+    
+  });
+
+
+
+
+
+
+}
+
+
+
+
+function showErrorMessageWithMessage(message)
+{
+  var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+      var errorLabel = document.getElementById('errorDescription');
+        errorLabel.innerText = message
+      $('#errorModal').modal('show');  
+}
+
+
+
+
+function showPerKWHPricingModal()
+{
+
+
+  $('#setPerKwHHourModal').modal('show');
+  
+}
+
+
+function showPerHourPricingModal()
+{
+
+
+  $('#setHourPricingModal').modal('show');
+  
+}
+
+
+function addNewPricingOptionButton()
+{
+  addNewPricingOption();
+}
+
+
+
+
+
+
+function addNewLocationToDB()
+{
+
+    dismissAddLocationModal();
+
+    var name = document.getElementById('locationNameTextField');
+    var address1 = document.getElementById('address1TextField');
+    var city = document.getElementById('cityTextField');
+    var state = document.getElementById('stateTextField');
+    var zip = document.getElementById('zipTextField');
+    var notes = document.getElementById('notesTextField');
+
+
+    if(!name.value)
+    {
+      
+      showErrorMessageWithMessage('Please enter a location name and try again.');
+      
+      return;
+    }
+    if(!address1.value)
+    {
+      
+      showErrorMessageWithMessage('Please enter an address and try again.');
+      
+      return;
+    }
+    if(!city.value)
+    {
+      
+      showErrorMessageWithMessage('Please enter a city and try again.');
+      
+      return;
+    }
+    if(!state.value)
+    {
+      
+      showErrorMessageWithMessage('Please enter a state and try again.');
+      
+      return;
+    }
+    if(!zip.value)
+    {
+      
+      showErrorMessageWithMessage('Please enter a zip code and try again.');
+      
+      
+      return;
+    }
+
+
+
+
+
+    var storeInformation = { name: name.value,
+                            addressline1: address1.value,
+                            addressline2: " ",
+                            city: city.value,
+                            state: state.value,
+                            zipcode: zip.value,
+                            notes: notes.value};
+
+
+
+
+
+    var transactionFunctionCall = firebase.functions().httpsCallable('createStoreForOperator');
+      transactionFunctionCall({storeOBJ: storeInformation}).then(function(result) {
+        // Read result of the Cloud Function.
+        result = result.data.result;
+
+        console.log(result);
+        showSuccessModal();
+
+      
+
+
+
+
+
+
+      }).catch(function(error) {
+        // Getting the Error details.
+        var message = error.message;
+    showErrorMessageWithMessage(message);
+        ////window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+          //  //+ code + '\nError Message:' + message + '\nError Details:' + details);
+        
+        
+        
+      });
+
+
+
+
+}
+
+
+
+
+
+
+function addRowInList( selectionBoxID, storeName)
+{
+
+
+    var signUpDate = document.getElementById(selectionBoxID);
+        var value = document.createElement("option");
+        value.innerText = storeName;        
+        signUpDate.appendChild(value);
+
+}
+
+
+
+
+
+
+
+function getOperatorLocations()
+{
+
+
+
+  var transactionFunctionCall = firebase.functions().httpsCallable('getLocationsForOperator');
+  transactionFunctionCall({user: " "}).then(function(result) {
+    // Read result of the Cloud Function.
+    storesArray = result.data.stores;
+    var locationSelectionBox = document.getElementById('locationSelectionBox');
+    locationSelectionBox.innerText = "";
+
+
+    addRowInList('locationSelectionBox',  '+Add New Location')
+
+if(storesArray.length !=0)
+{
+
+  
+
+    for (var i = 0; i < storesArray.length; i++) {
+      
+      var store= storesArray[i];
+      addRowInList('locationSelectionBox',  store["name"])
+      var locationSelectionBox = document.getElementById('locationSelectionBox');
+      if(store.sid === machineDict.sid)
+      {
+        locationSelectionBox.selectedIndex = i +1;
+      }
+
+
+
+    }
+
+
+
+    $("#locationSelectionBox").select2({
+                          width: '100%'
+                        });
+
+  }
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var message = error.message;
+    showErrorMessageWithMessage(message);
+    ////window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+      //  //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    
+    
+  });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+function newStoreSelectedHandler(iteem)
+{
+
+  storeLocationSelectedIndex = iteem.selectedIndex;
+
+  storeObj = storesArray[storeLocationSelectedIndex-1]
+  console.log(storeObj)
+  
+  console.log(storeObj.sid);
+  console.log(storeObj.name);
+
+  var valuKeyPair = {value: storeObj.sid,
+                    machineID:machineID,
+                  key: "sid"};
+
+
+  updateMachineData(machineID, valuKeyPair);
+
+  var valuKeyPair = {value: storeObj.name,
+                    machineID:machineID,
+                  key: "store_name"};
+
+  updateMachineData(machineID, valuKeyPair);
+
+
+}
+
+
+
+function customAmountCheckBoxHandler(item)
+{
+
+
+  var valuKeyPair = {value: !item.checked,
+                    machineID:machineID,
+                  key: "isOnlyFixedOptionsEnabled"};
+
+  updateMachineData(machineID, valuKeyPair);
+
+  console.log(item.checked)
+  
+
+
+
+}
+
+var maxNumberOfActivations;
+
+function setActivationsButtonHandler()
+{
+
+  console.log('test')
+
+  var numberOfMaximumActivationsTextField = document.getElementById('numberOfMaximumActivationsTextField');
+  maxNumberOfActivations = parseInt(numberOfMaximumActivationsTextField.value);
+  
+  
+  var activationsButton = document.getElementById('activationsButton');
+  
+
+
+  if(Number.isInteger(maxNumberOfActivations))
+  {
+      console.log(parseInt(numberOfMaximumActivationsTextField.value));
+      
+      $('#setNumberOfUsageActivationsModal').modal('hide');
+      activationsButton.innerHTML = numberOfMaximumActivationsTextField.value +  ' activations';
+     
+      var valuKeyPair = {value: parseInt(numberOfMaximumActivationsTextField.value),
+                    machineID:machineID,
+                  key: "maxNumberOfActivations"};
+
+  updateMachineData(machineID, valuKeyPair);
+  numberOfMaximumActivationsTextField.value = '';
+  
+
+  }
+  else
+  {
+      var errorLabel = document.getElementById('errorDescription');
+      errorLabel.innerText = 'You entered an invalid whole number. Please enter a whole number like 1, 2, 3, 4...';
+      $('#setNumberOfUsageActivationsModal').modal('hide');
+      $('#errorModal').modal('show');
+      
+  }
+
+
+
+  
+  
+}
+
+
+
+function showAddLocationModal()
+{
+  $('#addLocationModal').modal('show');
+}
+
+
+function dismissAddLocationModal()
+{
+  $('#addLocationModal').modal('hide');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function signOut()
+{
+    console.log('signing out...');
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        console.log('signing out')
+        firebase.auth().signOut();
+        console.log('signed out')
+        // [END signout]
+      } else {
+        console.log('not signed in')
+
+  }
+}
+
+
+
+        const signout = () => {
+            auth.signOut();
+        };
+
+
+
+
+
+
+
+
+
+
+var machineID;
+
+
+        auth.onAuthStateChanged((authData) => {
+            if (authData) {
+                console.log('Logged in')
+                
+
+                
+
+                  x=document.getElementsByClassName("user-name");  // Find the elements
+                  for(var i = 0; i < x.length; i++){
+                  x[i].innerText=firebase.auth().currentUser.email;    // Change the content
+                  }
+
+
+                  var locationHash = location.hash
+                machineID = locationHash.substring(3, locationHash.length);
+            // getMachineTypes();
+            
+            
+            getMachineData();
+            
+    
+                  //getOperatorPermissions();
+
+
+            } else {
+                console.log('Logged out')
+                window.location.href = 'index-2.html';
+               // $loginFormContainer.show();
+                // $homeContainer.hide();
+
+            }
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+
+    <div id="machineAddedSuccess" tabindex="-1" role="dialog" style="" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center">
+              <div class="text-success"><span class="modal-main-icon mdi mdi-check"></span></div>
+              <h3>Machine Added! Switch Swash!</h3>
+              <p>You're all set, your machine is now configured and ready to use.</p>
+              <p>Visit the Machines tab to view all of your machines.</p>
+              <div class="mt-8">
+                <button type="button" data-dismiss="modal" class="btn btn-space btn-secondary">View My Machines</button>
+                <button type="button" data-dismiss="modal" class="btn btn-space btn-success">All Another Machine</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="usageSection" class="card">
+      <!-- <div class="card-header card-header">Pricing and Modes<span ></span>
+        <label  onClick="copyMachinePricing()" class="col-form-label-shinepay text-sm-right-right">Copy Pricing to other Machines</label>
+      </div> -->
+      <div class="card-body">
+                  
+
+
+        <div class="form-group row">
+          <label for="inputText3" class="col-12 col-sm-2 col-form-label text-sm-left">Price Per Hour</label>
+          <div class="col-12 col-sm-8 col-lg-3">
+            <input id="pricePerHourTextField"  onKeyPress="showUpdateButton()" type="text" class="form-control">
+            
+          </div>
+         
+          <div class="col-sm-2">
+            <select  onchange="timeDivisionsDropDownHandler(this)" id="timeDivisionDropDown" class="select2" tabindex="-1" aria-hidden="false">
+              <optgroup  label="Time Divisions"> -->
+                <option value=1>Hour</option>
+                <option value=2>Min</option>
+              
+              </optgroup>
+            
+            
+            </select>
+          </div>
+          <button id="pricePerHourUpdateButton" onClick="setPerHourPricingButtonHandler()" class="btn btn-space btn-primary-right active">Update</button>
+      </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="addLocationModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add New Location</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter location information</p>
+
+
+                <div class="modal-body form">
+                        <div class="form-group">
+                          <label>Location Name*</label>
+                          <input id="locationNameTextField" placeholder="173 Playa St." class="form-control">
+                
+                </div>
+
+
+                
+                        <div class="form-group">
+                          <label>Address*</label>
+                          <input id="address1TextField" placeholder="173 Playa St." class="form-control">
+                
+                </div>
+
+
+
+                                        <div class="form-group">
+                          <label>City*</label>
+                          <input id="cityTextField" placeholder="Oakland" class="form-control">
+                </div>
+
+
+                
+                        <div class="form-group">
+                          <label>State*</label>
+                          <input id="stateTextField" placeholder="CA" class="form-control">
+                </div>
+                
+
+
+                
+                        <div class="form-group">
+                          <label>Zip Code*</label>
+                          <input id="zipTextField" placeholder="94601" class="form-control">
+                </div>
+                
+
+
+
+                
+                        <div class="form-group">
+                          <label>Notes</label>
+                          <input id="notesTextField" placeholder="12-plex with stackable washer/dryer" class="form-control">
+                        </div>
+
+
+
+
+
+                </div>
+
+
+            
+
+
+
+                
+          
+          <p>*Required Information</p>
+
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="addNewLocationToDB()" type="button" class="btn btn-space btn-success-shinepay" >Add Location</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+    
+
+    <div id="setPerKwHHourModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Set Per Hour Pricing</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter the price per hour pricing</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <label for="machinePerKWhPricingTextField">Price $</label>
+                          <input id="machinePerKWhPricingTextField" placeholder="2.50" class="form-control">
+                </div>
+                </div>
+
+
+              
+
+
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="setPerKWHPricingButtonHandler()" type="button" class="btn btn-space btn-success-shinepay" >Set Price</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!--     
+    <div id="setHourPricingModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Set Per Hour Pricing</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            <p>Enter the price per hour pricing</p>
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <label for="machinePerHourPricingTextField">Price $</label>
+                          <input id="machinePerHourPricingTextField" placeholder="2.50" class="form-control">
+                </div>
+                </div>                     
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="setPerHourPricingButtonHandler()" type="button" class="btn btn-space btn-success-shinepay" >Set Price</button>
+          </div>
+        </div>
+      </div>
+    </div>
+ -->
+
+
+
+ <div id="machineExistsModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+      <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+          </div>
+        <div class="modal-body">
+            <div class="text-center">
+              <div class="text-danger"><span class="modal-main-icon mdi mdi-close-circle-o"></span></div>
+              <h3>Error!</h3>
+              <p id="failureDescription">This machine exists. Please try the number again or contact ShinePay support. support@getshinepay.com</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+            <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="setNumberOfUsageActivationsModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Maximum Number of Activations</h4>
+        <button type="button" class="close" data-dismiss="modal"
+        aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Enter the maximum number of activations. This will be the </p>
+             <div class="modal-body form">
+                    <div class="form-group">
+                      <label for="numberOfMaximumActivationsTextField">Activations</label>
+                      <input id="numberOfMaximumActivationsTextField" placeholder="10" class="form-control">
+            </div>
+            </div>                     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+        <button onClick="setActivationsButtonHandler()" type="button" class="btn btn-space btn-success-shinepay" >Set Activations</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="addCustomerListModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Create New List</h4>
+        <button type="button" class="close" data-dismiss="modal"
+        aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Enter the new name for your new customer list </p>
+        <p>(You can change this down the road)</p>
+             <div class="modal-body form">
+                    <div class="form-group">
+                      <label for="nameOfCustomerListTextField">Custome List Name</label>
+                      <input id="nameOfCustomerListTextField" placeholder="Sunnyvale Supermarket Employees" class="form-control">
+            </div>
+            </div>                     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+        <button onClick="createNewCustomerListButtonHandler()" type="button" class="btn btn-space btn-success-shinepay" >Create List</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+ <div id="SuccessModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+      <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+          </div>
+        <div class="modal-body">
+            <div class="text-center">
+              <div class="text-success"><span class="modal-main-icon mdi mdi-check"></span></div>
+              <h3>Success</h3>
+              <p id="successDescription">You're all set. Your machine is now configured and ready to use.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+            <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="confirmDeletingOfMachineModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+      <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+          </div>
+        <div class="modal-body">
+            <div class="text-center">
+              <div class="text-warning"><span class="modal-main-icon mdi mdi-alert-triangle"></span></div>
+              <h3>Confirm Machine Removal</h3>
+              <p id="removeMachineWording">Are you sure you want to permenantly remove machine?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" data-dismiss="modal" class="btn btn-secondary">No</button>
+            <button onClick="deleteMachineButtonHandler()" type="button" data-dismiss="modal" class="btn btn-primary">Confirm</button>
+            <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div id="errorModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+      <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+          </div>
+        <div class="modal-body">
+            <div class="text-center">
+              <div class="text-danger"><span class="modal-main-icon mdi mdi-close-circle-o"></span></div>
+              <h3 id="errorTitle">Something went wrong</h3>
+              <p id="errorDescription">You need at least one price on the machine.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+            <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+<!-- Mirrored from shinepay.io/powerspark.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:16:31 GMT -->
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from shinepay.io/distributor/account.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:17:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>ShineDistributor</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/lib/datatables/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper">
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a href="index.html" class="navbar-brand"></a>
+          </div>
+          <div class="be-right-navbar">
+
+                <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name"></span></a>
+                <div role="menu" class="dropdown-menu">     
+                  <div class="user-info">
+                    <div class="user-name"></div>
+                    <!--  -->
+                  </div>
+                  <a onClick="signOut()" class="dropdown-item"><span class="icon mdi mdi-power"></span> Logout</a>
+                </div>
+              </li>
+            </ul>
+
+            
+<!--             <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="user-name">email</span></a>
+                <div role="menu" class="dropdown-menu">     
+                  <div class="user-info">
+                    <div class="user-name"></div>
+                    
+                  </div><a href="pages-profile.html" class="dropdown-item">
+                  <span class="icon mdi mdi-face"></span> Account</a><a href="#" class="dropdown-item">
+                  <span class="icon mdi mdi-settings"></span> Settings</a>
+                  <a onClick="signOut()" class="dropdown-item"> <span class="icon mdi mdi-power"></span> Logout</a>
+                </div>
+              </li>
+            </ul> -->
+            <div class="page-title"><span></span></div>
+            <ul class="nav navbar-nav float-right be-icons-nav">
+             <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon fas fa-th"></i></a>
+                <ul class="dropdown-menu be-connections">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        
+                            <div class="col"><a href="../transactions.html" ><span>ShineInsights</span></a></div>
+                          <div class="col"><a href="operatorhome.html" ><span>ShineDistributor</span></a></div>
+                          <div class="col"><a href="http://help.getshinepay.com/"><span>Help Center</span></a></div>
+                          
+                        
+                      </div>
+                    </div>
+                    
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">ShineDistributor</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements">
+                  
+                     <li><a href="operatorhome.html"><i class="icon fal fa-wrench"></i><span>Installations</span></a>
+                  </li>                  
+                  <li><a href="techhome.html"><i class="icon fal fa-user-shield"></i><span>Techs</span></a>
+                  </li>
+                  <li><a href="account.html"><i class="icon fal fa-cog"></i><span>Account</span></a>
+                  </li>
+
+
+
+     
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="be-content">
+        <div class="page-head">
+          <h2 class="page-head-title">Account Information</h2>
+          <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb page-head-nav">
+              <li class="breadcrumb-item"><a href="#">Account</a></li>
+
+            </ol>
+          </nav>
+        </div>
+        <div class="main-content container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card card-table">
+
+                <div class="card-body">
+              <div class="card">
+                <div class="card-header card-header-divider">Account Information<span class="card-subtitle">Click on your information below to edit</span></div>
+                <div class="card-body">
+                  <div class="mt-2 mb-4">
+                    <div class="list-group d-flex">
+                      <!-- PLACE HOLDER FOR JAVA SCRIPT -->
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+<!-- Firebase App is always required and must be first -->
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+<script defer src="../../pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      // $(document).ready(function(){
+      // 	//initialize the javascript
+      // 	App.init();
+      // 	App.dataTables();
+        
+      // });
+
+
+
+  var config = {
+    apiKey: "AIzaSyD32ASsOC4RVhVjDEJtxZhFd457HYR4DyU",
+    authDomain: "cleanpay-5c93c.firebaseapp.com",
+    databaseURL: "https://cleanpay-5c93c.firebaseio.com",
+    projectId: "cleanpay-5c93c",
+    storageBucket: "cleanpay-5c93c.appspot.com",
+    messagingSenderId: "531432738406"
+  };
+
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        
+        const functions = firebase.functions();
+
+
+
+
+
+
+
+function getBusinessInformation()
+{
+
+
+
+
+  var data = {sid:" "};
+
+  var transactionFunctionCall = firebase.functions().httpsCallable('getBusinessInformationForDistributor');
+  transactionFunctionCall(data).then(function(result) {
+    // Read result of the Cloud Function.
+    var info = result.data.information;
+
+    
+
+
+
+        var tbl = document.getElementsByClassName('list-group d-flex');
+        tbl[0].innerText = "";   //clears the table first
+
+    var li = document.createElement("span");
+    li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+    var userBalance = parseFloat(info.balance);
+    if(info.balance)
+      li.appendChild(document.createTextNode( "Account Balance: $" + userBalance.toFixed(2).toString() + " USD"));
+    else
+      li.appendChild(document.createTextNode("Not set"));
+    tbl[0].appendChild(li);
+
+
+
+    var li = document.createElement("span");
+    li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+    if(info.email)
+      li.appendChild(document.createTextNode(info.email));
+    else
+      li.appendChild(document.createTextNode("Not set"));
+    tbl[0].appendChild(li);
+                
+
+    var li = document.createElement("span");
+    li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+    li.setAttribute('onClick',"showUpdateAddress1Modal()");
+    if(info.addressline1)
+      li.appendChild(document.createTextNode(info.addressline1));
+    else
+      li.appendChild(document.createTextNode("Not set"));
+    tbl[0].appendChild(li);
+
+    var li = document.createElement("span");
+    li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+    li.setAttribute('onClick',"showUpdateAddress2Modal()");
+    if(info.addressline2)
+      li.appendChild(document.createTextNode(info.addressline2));
+    else
+      li.appendChild(document.createTextNode("Not set"));
+    tbl[0].appendChild(li);
+
+    var li = document.createElement("span");
+    li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+    li.setAttribute('onClick',"showUpdateCityModal()");
+    if(info.city)
+      li.appendChild(document.createTextNode(info.city));
+    else
+      li.appendChild(document.createTextNode("Not set"));
+    tbl[0].appendChild(li);
+
+    var li = document.createElement("span");
+    li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+    li.setAttribute('onClick',"showUpdateStateModal()");
+    if(info.state)
+      li.appendChild(document.createTextNode(info.state));
+    else
+      li.appendChild(document.createTextNode("Not set"));
+    tbl[0].appendChild(li);
+
+    var li = document.createElement("span");
+    li.setAttribute('class',"list-group-item d-flex list-group-item-action");
+    li.setAttribute('onClick',"showUpdateZipCodeModal()");
+    if(info.zipcode)
+      li.appendChild(document.createTextNode(info.zipcode));
+    else
+      li.appendChild(document.createTextNode("Not set"));
+    tbl[0].appendChild(li);      
+
+
+
+
+
+
+
+    // var card = document.getElementById('loadingCard');
+    // card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+  
+  }).catch(function(error) {
+    
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    
+    console.error('There was an error when calling the Cloud Function', error);
+    
+    
+    
+    
+    
+  });
+
+
+
+
+}
+
+
+
+
+
+
+
+
+function showUpdateAddress1Modal()
+{
+
+  $('#addressline1Modal').modal('show');
+}
+
+
+
+
+function showUpdateAddress2Modal()
+{
+
+  $('#addressline2Modal').modal('show');
+}
+
+
+
+function showUpdateCityModal()
+{
+
+  $('#cityModal').modal('show');
+}
+
+
+function showUpdateStateModal()
+{
+
+  $('#stateModal').modal('show');
+}
+
+
+
+function showUpdateZipCodeModal()
+{
+
+  $('#zipModal').modal('show');
+}
+
+
+
+
+function updateAddress1InDB()
+{
+
+    var userId = firebase.auth().currentUser.uid;
+    var textField = document.getElementById('address1ModalTextField');
+    // firebase.database().ref('user').child(userId).child('userInfo').update({
+    // addressline1: textField.value});
+    updateBusinessInformation('addressline1',  textField.value);
+    textField.value = "";
+    $('#addressline1Modal').modal('hide');
+
+}
+
+
+
+
+
+
+function updateAddress2InDB()
+{
+
+    var userId = firebase.auth().currentUser.uid;
+    var textField = document.getElementById('address2ModalTextField');
+    // firebase.database().ref('user').child(userId).child('userInfo').update({
+    // addressline2: textField.value});
+    updateBusinessInformation('addressline2',  textField.value);
+    textField.value = "";
+    $('#addressline2Modal').modal('hide');
+
+}
+
+
+
+
+
+
+function updateStateInDB()
+{
+
+    var userId = firebase.auth().currentUser.uid;
+    var textField = document.getElementById('stateModalTextField');
+    updateBusinessInformation('state',  textField.value);
+    textField.value = "";
+    // firebase.database().ref('user').child(userId).child('userInfo').update({
+    // state: textField.value});
+    $('#stateModal').modal('hide');
+
+}
+
+
+
+
+
+
+
+
+function updateCityInDB()
+{
+
+    var userId = firebase.auth().currentUser.uid;
+    var textField = document.getElementById('cityModalTextField');
+    updateBusinessInformation('city',  textField.value);
+    textField.value = "";
+    // firebase.database().ref('user').child(userId).child('userInfo').update({
+    // city: textField.value});
+    $('#cityModal').modal('hide');
+
+}
+
+
+
+
+
+
+
+function updateZipCodeInDB()
+{
+
+    var userId = firebase.auth().currentUser.uid;
+    var zipCodeTextField = document.getElementById('zipCodeModalTextField');
+    //firebase.database().ref('user').child(userId).child('userInfo').update({
+    //zipcode: zipCodeTextField.value});
+    updateBusinessInformation('zipcode',  zipCodeTextField.value);
+    zipCodeTextField.value = "";
+    $('#zipModal').modal('hide');
+
+}
+
+
+function updateBusinessInformation(key, value)
+{
+
+
+
+    var data = {key: key,
+               value : value};
+
+
+
+  var transactionFunctionCall = firebase.functions().httpsCallable('updateBusinessInformationForDistributor');
+  transactionFunctionCall(data).then(function(result) {
+    // Read result of the Cloud Function.
+    // var info = result.data.information;
+    getBusinessInformation();
+
+
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    // [END_EXCLUDE]
+    // [END_EXCLUDE]
+  });
+
+}
+
+
+
+
+
+
+
+function signOut()
+{
+    console.log('signing out...');
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        console.log('signing out')
+        firebase.auth().signOut();
+        console.log('signed out')
+        // [END signout]
+      } else {
+        console.log('not signed in')
+
+  }
+}
+
+
+
+        const signout = () => {
+            auth.signOut();
+        };
+
+
+
+
+
+
+
+
+
+
+
+function getPermissions()
+{
+
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('confirmUserHasDistributorPermission');
+  transactionFunctionCall({email: firebase.auth().currentUser.email}).then(function(result) {
+  var outcome = result.data.outcome;
+
+if(outcome === false)
+{
+  signout()
+  $('#noPermissionModal').modal('show');
+}
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var code = error.code;
+    var message = error.message;
+    var details = error.details;
+    // [START_EXCLUDE]
+    console.error('There was an error when calling the Cloud Function', error);
+
+    window.location.href = 'managemachines.html';
+
+  });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        auth.onAuthStateChanged((authData) => {
+            if (authData) {
+                console.log('Logged in')
+                App.init();
+
+                getPermissions();                 
+                getBusinessInformation();
+
+x=document.getElementsByClassName("user-name");  // Find the elements
+    for(var i = 0; i < x.length; i++){
+    x[i].innerText=firebase.auth().currentUser.email;    // Change the content
+    }
+
+            } else {
+                console.log('Logged out')
+                window.location.href = '../index-2.html';
+               // $loginFormContainer.show();
+                // $homeContainer.hide();
+
+            }
+        });
+
+
+
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="SuccessModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Success</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Success</p>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+            <button onClick="dismissSuccess()" type="button" class="btn btn-success modal-close" >OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <div id="addressline1Modal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Address Line 1 Update</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter address line 1</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <!-- <label>Email address</label> -->
+                          <input id="address1ModalTextField" placeholder="308 Case Rd" class="form-control">
+                        </div>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="updateAddress1InDB()" type="button" class="btn btn-success modal-close" >Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="addressline2Modal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Address Line 2 Update</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter address line 2</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <!-- <label>Email address</label> -->
+                          <input id="address2ModalTextField" placeholder="Apt 520" class="form-control">
+                        </div>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="updateAddress2InDB()" type="button" class="btn btn-success modal-close" >Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="stateModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">State Update</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter a state</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <!-- <label>Email address</label> -->
+                          <input id="stateModalTextField" placeholder="CA" class="form-control">
+                        </div>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="updateStateInDB()" type="button" class="btn btn-success modal-close" >Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="cityModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">City Update</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter a city</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <!-- <label>Email address</label> -->
+                          <input id="cityModalTextField" placeholder="Oakland" class="form-control">
+                        </div>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="updateCityInDB()" type="button" class="btn btn-success modal-close" >Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="zipModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Zip Code Update</h4>
+            <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">×</button>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Enter a zip code</p>
+
+
+                 <div class="modal-body form">
+                        <div class="form-group">
+                          <!-- <label>Email address</label> -->
+                          <input id="zipCodeModalTextField" placeholder="94612" class="form-control">
+                        </div>
+            
+                     
+          </div>
+          <div class="modal-footer">
+            
+            
+
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+            <button onClick="updateZipCodeInDB()" type="button" class="btn btn-success modal-close" >Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Mirrored from shinepay.io/distributor/account.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:17:58 GMT -->
+</html>

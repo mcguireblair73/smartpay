@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from shinepay.io/machinesbylocation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:16:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>ShineInsights</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper">
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a href="index-2.html" class="navbar-brand"></a>
+          </div>
+          <div class="be-right-navbar">
+            <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name"></span></a>
+                <div role="menu" class="dropdown-menu">     
+                  <div class="user-info">
+                    <div class="user-name"></div>
+                    
+                  </div>
+                  <a href="account.html" class="dropdown-item"><span class="icon fal fa-usd-square"></span> Account</a>
+                  <a onClick="signOut()" class="dropdown-item"><span class="icon mdi mdi-power"></span> Logout</a>
+                </div>
+              </li>
+            </ul>
+            <!-- <div class="page-title"><span>Manage Sparks</span></div> -->
+            <ul class="nav navbar-nav float-right be-icons-nav">
+
+              
+              <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon fas fa-th"></i></a>
+                <ul class="dropdown-menu be-connections">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        
+                          <div class="col"><a href="#" ><span>ShineInsights</span></a></div>
+                          
+                          
+                          <div class="col"><a href="#"><span>Help Center</span></a></div>
+                          
+                        
+                      </div>
+                    </div>
+                    
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">Table Filters</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements">
+                  <!-- <li class="divider">Menu</li> -->
+                  
+
+                   
+               
+                  <li><a href="dashboard.html"><i class="icon fal fa-chart-line"></i><span>Dashboard</span></a>
+                  </li>               
+                  <li><a href="managemachines.html"><i class="icon fal fa-browser"></i><span>Sparks</span></a>
+                  </li>
+                  <li><a href="locations.html"><i class="icon fal fa-map-marker"></i><span>Locations</span></a>
+                  </li>
+                  <li><a href="transactions.html"><i class="icon fal fa-list-alt"></i><span>Transactions</span></a>
+                  </li>
+                  <li><a href="reports.html"><i class="icon fal fa-chart-pie"></i><span>Reports</span></a>
+                  </li>
+                  <li><a href="refunds.html"><i class="icon fal fa-receipt"></i></i><span>Refunds</span></a>
+                  </li>
+                  <li><a href="customers.html"><i class="icon fal fa-users"></i><span>Customers</span></a>
+                  </li>
+                  <li><a href="attendants.html"><i class="icon fal fa-user-tag"></i><span>Attendants</span></a>
+                  </li>
+                  <li><a href="kiosk.html"><i class="icon fal fa-tablet-alt"></i><span>Kiosk</span></a>
+                  </li>
+                  <li><a href="income.html"><i class="icon fal fa-usd-square"></i><span>Income</span></a>
+                  </li>
+                  <!-- <li><a href="discounts.html"><i class="icon fal fa-usd-square"></i><span>Discounts</span></a>
+                  </li>                   -->
+                  <li><a href="account.html"><i class="icon fal fa-cog"></i><span>Account</span></a>
+                  </li>
+                  <li><a href="help.html"><i class="icon fas fa-question-circle"></i><span>Help</span></a>
+                  </li>
+
+
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="progress-widget">
+            <div class="progress-data"><span class="progress-value">60%</span><span class="name">Current Project</span></div>
+            <div class="progress">
+              <div style="width: 60%;" class="progress-bar progress-bar-primary"></div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="be-content">
+        <div class="page-head">
+          <h2  id="pageTitleLabelHeader" class="page-head-title">Sparks At </h2>
+          <button onclick="addNewMachineHandler()"   class="btn btn-space btn-primary-right active">Add New Spark</button>
+          <button onclick="promptToRemoveStore()"   class="btn btn-space btn-primary-right active">Delete Location</button>
+          <button onclick="promptToResetCoinCount()"   class="btn btn-space btn-primary-right active">Reset Coin Counts</button>
+          <!-- <button onclick="promptToAddVandalismReport()"   class="btn btn-space btn-primary-right active">Add Vandalism Report</button> -->
+          <button onclick="showAnalytics()"   class="btn btn-space btn-primary-right active">Analytics</button>
+          <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb page-head-nav">
+              <li class="breadcrumb-item"><a href="transactions.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="locations.html">Locations</a></li>
+              <li class="breadcrumb-item"><a >Sparks by Location</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div id="loadingCard"  class="main-content container-fluid be-loading">
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-table">
+
+
+                <h2 class="page-head-title">Laundry Sparks</h2>
+                <div class="card-body">
+                  <table id="laundrySparkTable" class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th><i class="far fa-browser"></i>    Machine</th>
+                        <th><i class="fal fa-map-marker-alt"></i>    Location</th>
+                        <th><i class="far fa-circle"></i>    Type</th>
+                        <th><i class="far fa-dollar-sign"></i>    Price</th>
+                        <th><i class="fas fa-toggle-off"></i>    Enabled</th>
+                        <th><i class="far fa-coins"></i>    Coin Count</th>
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                     <!-- PLACE HOLDER FOR JAVASCRIPT TO FILL IN -->
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-table">
+
+
+                <h2 class="page-head-title">Charge Sparks</h2>
+                <div class="card-body">
+                  <table id="chargeSparkTable" class="table table-striped table-hover table-fw-widget">
+                    <thead>
+                      <tr>
+                        <th><i class="far fa-browser"></i>    Machine</th>
+                        <th><i class="fal fa-map-marker-alt"></i>    Location</th>
+                        <th><i class="fas fa-toggle-off"></i>    Spark Type</th>
+                        <th><i class="fas fa-toggle-off"></i>    Enabled</th>
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                     <!-- PLACE HOLDER FOR JAVASCRIPT TO FILL IN -->
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-table">
+
+
+                <h2 class="page-head-title">Mechanical Sparks</h2>
+                <div class="card-body">
+                  <table id="mechanicalSparkTable" class="table table-striped table-hover table-fw-widget">
+                    <thead>
+                      <tr>
+                        <th><i class="far fa-browser"></i>    Machine</th>
+                        <th><i class="fal fa-map-marker-alt"></i>    Location</th>
+                        <th><i class="far fa-dollar-sign"></i>    Price</th>
+                        <th><i class="fas fa-toggle-off"></i>    Enabled</th>
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                     <!-- PLACE HOLDER FOR JAVASCRIPT TO FILL IN -->
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <div class="card card-table">
+
+
+                <h2 class="page-head-title">Parking Spark</h2>
+                <div class="card-body">
+                  <table id="parkingSpotTable" class="table table-striped table-hover table-fw-widget">
+                    <thead>
+                      <tr>
+                        <th><i class="far fa-browser"></i>    Machine</th>
+                        <th><i class="fal fa-map-marker-alt"></i>    Location</th>
+                        <th><i class="far fa-dollar-sign"></i>    Price</th>
+                        
+
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                     
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            </div>
+
+
+            </div>
+          </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-table">
+
+
+                <h2 class="page-head-title">Power Sparks</h2>
+                <div class="card-body">
+                  <table id="powerSparkTable" class="table table-striped table-hover table-fw-widget">
+                    <thead>
+                      <tr>
+                        <th><i class="far fa-browser"></i>    Machine</th>
+                        <th><i class="fal fa-map-marker-alt"></i>    Location</th>
+                        <th><i class="far fa-dollar-sign"></i>    Spark Type</th>
+                        <th><i class="fas fa-toggle-off"></i>    Enabled</th>
+                        
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                     <!-- PLACE HOLDER FOR JAVASCRIPT TO FILL IN -->
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <div class="card card-table">
+
+
+                <h2 class="page-head-title">Vending Sparks</h2>
+                <div class="card-body">
+                  <table id="vendingSparkTable" class="table table-striped table-hover table-fw-widget">
+                    <thead>
+                      <tr>
+                        <th><i class="far fa-browser"></i>    Machine</th>
+                        <th><i class="fal fa-map-marker-alt"></i>    Location</th>
+                        <th><i class="fas fa-toggle-off"></i>    Enabled</th>
+                        
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                     
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            </div>
+
+
+            </div>
+          </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-table">
+
+
+                <h2 class="page-head-title">Vandalism Reports</h2>
+                <div class="card-body">
+                  <table id="vandalismReportsTable" class="table table-striped table-hover table-fw-widget">
+                    <thead>
+                      <tr>
+                        <th><i class="far fa-browser"></i>    Date Added</th>
+                        <th><i class="fal fa-map-marker-alt"></i> Date of Vandalism</th>
+                        <th><i class="fas fa-toggle-off"></i>    Amount Lost</th>
+                        <th><i class="fas fa-toggle-off"></i>    Notes</th>
+                        <th><i class="fas fa-toggle-off"></i>    Downtime (days)</th>
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                     
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+
+             <div class="be-spinner">
+              <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+              </svg>
+             </div>
+            </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+           
+          
+        </div>
+    </div>
+
+
+  <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+
+
+<script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+<script src="assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+
+    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+    <script src="assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
+<script src="assets/js/app-table-filters.js" type="text/javascript"></script>
+    <script src="assets/js/app-form-elements.js" type="text/javascript"></script>
+<script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+
+
+
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+  
+
+
+
+      });
+
+
+
+
+
+      var config = {
+    apiKey: "AIzaSyBi9uQZExymWoOz47IoGoxZ4DEOWpaAZNk",
+    authDomain: "smartpay-bc639.firebaseapp.com",
+    databaseURL: "https://smartpay-bc639-default-rtdb.firebaseio.com",
+    projectId: "smartpay-bc639",
+    storageBucket: "smartpay-bc639.firebasestorage.app",
+    messagingSenderId: "52960112231"
+  };
+
+
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        
+        const functions = firebase.functions();
+
+    var locationID = '';
+
+
+
+        auth.onAuthStateChanged((authData) => {
+            if (authData) {
+                console.log('Logged in')
+                App.init();
+                App.tableFilters();
+                //App.formElements();
+                
+
+                
+                
+
+                  var card = document.getElementById('loadingCard');
+                  card.setAttribute('class' , 'be-loading-active');
+
+                  var locationHash = location.hash
+                locationID = locationHash.substring(3, locationHash.length);
+
+                x=document.getElementsByClassName("user-name");  // Find the elements
+                  for(var i = 0; i < x.length; i++){
+                  x[i].innerText=firebase.auth().currentUser.email;    // Change the content
+                  }
+
+        getMachines();
+
+        getStoreNameBySID();
+
+
+            } else {
+                console.log('Logged out')
+                window.location.href = 'index-2.html';
+
+
+            }
+        });
+
+
+
+
+function showAnalytics()
+{
+  window.location.href = 'locationanalytics.html#!/' + locationID; 
+
+}
+
+
+
+
+
+
+
+
+function initDatatables()
+{
+  console.log('init databtables')
+  $.fn.dataTable.ext.errMode = 'none';  //TODO: this disables errors and should be removed at some point
+      $.extend( true, $.fn.dataTable.defaults, {
+      dom:
+        "<'row be-datatable-header'<'col-sm-6'l><'col-sm-6'f>>" +
+        "<'row be-datatable-body'<'col-sm-12'tr>>" +
+        "<'row be-datatable-footer'<'col-sm-5'i><'col-sm-7'p>>"
+    } );
+
+    // $("#table1").dataTable();
+
+    
+    
+}
+
+
+
+
+
+function returnMachineData(tableName, machineObj)
+{
+
+var returnObj = [];
+  if(machineObj.sparkType === "laundry")
+  {
+                    return [machine.store_name, 
+                      machine.mid, 
+                      machine.type,
+                      machine.price,
+                      machine.isenabled,
+                      machine.coincount]
+
+
+  }
+  else if(machineObj.sparkType === "charge")
+  {
+
+
+
+  }
+
+
+
+}
+
+function promptToRemoveStore(key)
+{
+storeKey = key;
+console.log(key)
+$('#removeStoreModal').modal('show');
+
+}
+
+
+function promptToAddVandalismReport()
+{
+  $('#addVandalismReportModal').modal('show');
+}
+
+
+
+
+
+
+function removeLocation()
+{
+
+    var card = document.getElementById('loadingCard');
+    card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+    // var pid = attendantPermissionsObjs[storeKey].aid;
+    // console.log(pid)
+
+
+  $('#removeStoreModal').modal('hide');
+   var transactionFunctionCall = firebase.functions().httpsCallable('removeStoreForOperator');
+    transactionFunctionCall({storeID: locationID}).then(function(result) {
+      // Read result of the Cloud Function.
+      var result = result.data.result;
+          console.log(result);
+          var descriptionField = document.getElementById('successDescription');
+      descriptionField.innerText = 'Removed location successfully..'
+      $('#SuccessModal').modal('show');
+          
+    var card = document.getElementById('loadingCard');
+    card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+
+    }).catch(function(error) {
+      
+      
+      var message = error.message;
+      showErrorMessageWithMessage(message);
+      
+
+      
+    });
+
+}
+
+
+
+
+
+
+function getStoreNameBySID()
+{
+
+
+var pageTitleLabelHeader = document.getElementById('pageTitleLabelHeader');
+  var transactionFunctionCall = firebase.functions().httpsCallable('getStoreNameBySIDForOperator');
+  transactionFunctionCall({sid: locationID}).then(function(result) {
+    // Read result of the Cloud Function.
+    var storeName = result.data.name;
+    
+    var locationSelectionBox = document.getElementById('pageTitleLabelHeader');
+    locationSelectionBox.innerText = "Location " + storeName;
+
+
+
+  }).catch(function(error) {
+
+    var message = error.message;
+    showErrorMessageWithMessage(message);
+    
+    
+    
+  });
+
+
+
+
+
+
+}
+
+
+function addVandlismReportToDatabase()
+{
+
+  var card = document.getElementById('loadingCard');
+  card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+  var vandalismDate = $("#vandalismDatePicker").data("datetimepicker").getDate()
+  var formattedVandalismDate = $.datepicker.formatDate("yy-mm-dd", vandalismDate);
+
+  $('#addVandalismReportModal').modal('hide');
+
+  var damageAmountTextField = document.getElementById('DamageAmountTextField');
+  var downtimeTextField = document.getElementById('downtimeTextField');
+  var vandalismReportNotesTextField = document.getElementById('vandalismReportNotesTextField');
+  
+
+  var  damageAmont =  parseFloat(damageAmountTextField.value);
+  var  downtimeInt =  parseInt(downtimeTextField.value);
+  var vandlismrNotes = vandalismReportNotesTextField.value;
+
+var vandalismReportObj = { dateOfVandalism: formattedVandalismDate,
+                damageAmount:damageAmont,
+                downtime: downtimeInt,
+                notes: vandlismrNotes};
+  
+
+
+  var transactionFunctionCall = firebase.functions().httpsCallable('addVandalismReportForOperator');
+  transactionFunctionCall(vandalismReportObj).then(function(result) {
+    // Read result of the Cloud Function.
+    var storeName = result.data.name;
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+      var descriptionField = document.getElementById('successDescription');
+      descriptionField.innerText = 'The vandalism report has been successfully added.'
+      $('#SuccessModal').modal('show');
+      
+
+
+
+  }).catch(function(error) {
+
+    var message = error.message;
+    card.setAttribute('class' , 'main-content container-fluid be-loading');
+    showErrorMessageWithMessage(message);
+    
+    
+    
+  });
+
+
+
+
+
+
+
+}
+
+
+
+function resetCoinCountButtonHandler()
+{
+
+
+
+  $('#resetCoinCountModal').modal('hide');  
+  var card = document.getElementById('loadingCard');
+  card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+
+      
+  var transactionFunctionCall = firebase.functions().httpsCallable('resetCoinCountsAtLocationForOperator');
+  transactionFunctionCall({locationID: locationID}).then(function(result) {
+    // Read result of the Cloud Function.
+    var storeName = result.data.name;
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+      var descriptionField = document.getElementById('successDescription');
+      descriptionField.innerText = 'Coin counts for this location has been reset.'
+      $('#SuccessModal').modal('show');
+      getMachines();
+
+
+
+  }).catch(function(error) {
+
+    var message = error.message;
+    card.setAttribute('class' , 'be-loading');
+    showErrorMessageWithMessage(message);
+    
+    
+    
+  });
+
+
+
+}
+
+
+
+
+
+
+function promptToResetCoinCount()
+{
+  $('#resetCoinCountModal').modal('show');  
+  
+}
+
+
+
+
+
+function showSuccessModal()
+{
+
+$('#SuccessModal').modal('show');
+
+}
+function getVandalismReports()
+{
+ 
+  
+var transactionFunctionCall = firebase.functions().httpsCallable('getVandalismReportsForOperator');
+  transactionFunctionCall({locationID:locationID}).then(function(result) {
+    // Read result of the Cloud Function.
+    var vandalismReportArray = result.data.reports;
+
+
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var message = error.message;
+    showErrorMessageWithMessage(message);
+    
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    
+    
+  });
+
+
+
+}
+
+
+function getFormattedDate(date) {
+  var year = date.getFullYear();
+  // return year;
+
+  var month = (1 + date.getMonth()).toString();
+  month = month.length > 1 ? month : '0' + month;
+
+  var day = date.getDate().toString();
+  day = day.length > 1 ? day : '0' + day;
+  
+  return month + '/' + day + '/' + year;
+}
+
+function getMachines()
+{
+
+
+
+var transactionFunctionCall = firebase.functions().httpsCallable('getMachinesByLocationForOperator');
+  transactionFunctionCall({locationID:locationID}).then(function(result) {
+    // Read result of the Cloud Function.
+    var machinesArray = result.data.machines;
+    var reportsArray = result.data.reports;
+    console.log(reportsArray);
+
+    
+    initDatatables();
+        laundrySparkTable =  $('#laundrySparkTable').DataTable( {
+      select:true,
+    "language": {
+      "emptyTable": "No LaundrySparks added yet."
+    }
+    });
+
+    chargeSparkTable =  $('#chargeSparkTable').DataTable( {
+    "language": {
+      "emptyTable": "No ChargeSparks added yet."
+    }
+    });
+
+
+    mechanicalSparkTable =  $('#mechanicalSparkTable').DataTable( {
+    "language": {
+      "emptyTable": "No MechanicalSparks added yet."
+    }
+    });
+
+    
+
+    powerSparkTable =  $('#powerSparkTable').DataTable( {
+    "language": {
+      "emptyTable": "No PowerSparks added yet."
+    }
+    });
+
+
+
+    parkingSpotTable =  $('#parkingSpotTable').DataTable( {
+    "language": {
+      "emptyTable": "No ParkingSparks added yet."
+    }
+    });
+
+    vendingSparkTable =  $('#vendingSparkTable').DataTable( {
+    "language": {
+      "emptyTable": "No VendingSparks added yet."
+    }
+    });
+
+
+
+    vandalismReportsTable =  $('#vandalismReportsTable').DataTable( {
+    "language": {
+      "emptyTable": "No reports added yet."
+    }
+    });
+
+    
+
+    
+
+
+    $('#chargeSparkTable').on('click', 'tr', function () {
+        var data = chargeSparkTable.row( this ).data();
+        window.location.href = 'chargespark.html#!/' + data[0]; 
+        
+    } );
+
+
+    $('#laundrySparkTable').on('click', 'tr', function () {
+        var data = laundrySparkTable.row( this ).data();
+        window.location.href = 'machine.html#!/' + data[0]; 
+        
+    } );
+
+
+
+    $('#powerSparkTable').on('click', 'tr', function () {
+        var data = powerSparkTable.row( this ).data();
+        if(data[2] === 'Vended')
+        {
+          window.location.href = 'powerspark.html#!/' + data[0]; 
+        }
+        else
+        {window.location.href = 'chargespark.html#!/' + data[0]; 
+
+        }
+
+        
+        
+    } );
+
+
+
+    $('#mechanicalSparkTable').on('click', 'tr', function () {
+        var data = mechanicalSparkTable.row( this ).data();
+        window.location.href = 'mechanicalspark.html#!/' + data[0]; 
+        
+    } );
+
+
+
+    $('#parkingSpotTable').on('click', 'tr', function () {
+        var data = parkingSpotTable.row( this ).data();
+        window.location.href = 'parkingspark.html#!/' + data[0]; 
+        // parkingSpotTable.row( this ).remove().draw()
+    });
+
+    laundrySparkTable.rows().remove().draw();
+    chargeSparkTable.rows().remove().draw();
+    powerSparkTable.rows().remove().draw();
+    parkingSpotTable.rows().remove().draw();
+    mechanicalSparkTable.rows().remove().draw();
+    vandalismReportsTable.rows().remove().draw();
+    
+      console.log(machinesArray.length);
+
+    
+    for (var i = 0; i < machinesArray.length; i++) {
+      var machine = machinesArray[i];
+
+
+
+
+
+        
+
+
+      if(machine.sparkType === "charge" ||  machine.sparkType ===  "charge_access")
+      {
+      
+
+        chargeSparkTable.row.add( [machine.mid, 
+                      machine.store_name, 
+                      machine.sparkType,
+                      machine.isenabled] );
+   
+      }
+      else if(machine.sparkType === "power" ||  machine.sparkType ===  "power_access")
+      {
+      
+          var sparkTypeStr;
+          if(machine.sparkType  === 'power')
+          sparkTypeStr = 'Vended';
+          else
+          sparkTypeStr = 'Access Control'
+
+
+        powerSparkTable.row.add( [machine.mid, 
+                      machine.store_name, 
+                      sparkTypeStr,
+                      machine.isenabled] );
+   
+      }
+      else if(machine.sparkType === "mechanical")
+      {
+      
+
+        mechanicalSparkTable.row.add( [machine.mid, 
+                      machine.store_name, 
+                      '$' + (machine.pricePerHour/100.0).toFixed(2),
+                      machine.isenabled] );
+   
+      }
+      else if(machine.sparkType === "laundry" || machine.sparkType ===  "pennyIncremental")
+      {
+        var pricesArray = machine.price;
+        var pricesStr =  ' ';
+        
+        for(var j =0 ; j<pricesArray.length; j++)
+        {
+          pricesStr  = pricesStr + pricesArray[j].name  + ' $' + pricesArray[j].price.toFixed(2); 
+          if(pricesArray.length != j +1 )
+          {
+            pricesStr = pricesStr  + '; '
+          }
+
+        }
+        
+        
+        laundrySparkTable.row.add( [machine.mid, 
+                      machine.store_name, 
+                      machine.type,
+                      pricesStr,
+                      machine.isenabled,
+                      machine.coincount] );
+
+
+      }
+      else if(machine.sparkType === "parking")
+      {
+      
+
+        parkingSpotTable.row.add( [machine.mid, 
+                      machine.store_name, 
+                      '$'  + (machine.costPerHour/100.0).toFixed(2)] );
+   
+      }
+      else if(machine.sparkType === "vending")
+      {
+      
+
+        vendingSparkTable.row.add( [machine.mid, 
+                      machine.store_name, 
+                      machine.isenabled] );
+   
+      }
+
+
+
+    }
+    laundrySparkTable.rows().draw();
+    chargeSparkTable.rows().draw();
+    powerSparkTable.rows().draw();
+    parkingSpotTable.rows().draw();
+    vendingSparkTable.rows().draw();
+    mechanicalSparkTable.rows().draw();
+    
+
+
+    for (var i = 0; i < reportsArray.length; i++) {
+      var report = reportsArray[i];
+      
+      
+      vandalismReportsTable.row.add( [getFormattedDate(new Date(report.date_added)), 
+                                      report.dateOfVandalism, 
+                                      '$' + (report.damageAmount/100.0).toFixed(2),
+                                      report.notes,
+                                      report.downtime] );
+    
+    }
+
+
+
+    vandalismReportsTable.rows().draw();
+
+
+
+
+               
+  
+      var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+
+
+  }).catch(function(error) {
+    // Getting the Error details.
+    var message = error.message;
+    showErrorMessageWithMessage(message);
+    
+    console.error('There was an error when calling the Cloud Function', error);
+    //window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+        //+ code + '\nError Message:' + message + '\nError Details:' + details);
+    
+    
+    
+  });
+
+
+
+
+
+
+
+}
+
+function showErrorMessageWithMessage(message)
+{
+  var card = document.getElementById('loadingCard');
+      card.setAttribute('class' , 'main-content container-fluid be-loading');
+      var errorLabel = document.getElementById('errorDescription');
+        errorLabel.innerText = message
+      $('#errorModal').modal('show');  
+}
+
+
+
+
+function sparkTypeDropDownHandler()
+{
+  
+  var item = document.getElementById('customersDropDown');
+
+  if(item.value ==1)
+  {
+      //laundryspark
+      window.location.href = 'addmachine.html';
+  }
+  else if(item.value ==2)
+  {
+
+    //mechanicalspark
+    window.location.href = 'addpowerspark.html';
+  }
+  else if(item.value ==3)
+  {
+    //chargespark
+
+    window.location.href = 'addchargespark.html';
+  }
+  else if(item.value ==4)
+  {
+    //chargespark
+
+    window.location.href = 'addmechanicalspark.html';
+  }
+  else if(item.value ==5)
+  {
+    //chargespark
+
+    window.location.href = 'addparkingspot.html';
+  }
+  else if(item.value ==6)
+  {
+    //chargespark
+
+    window.location.href = 'addvendingspark.html';
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function addNewMachineHandler()
+{
+  $('#addNewSparkModal').modal('show');
+
+
+}
+
+
+
+
+
+
+
+
+
+function  machineSelectedHandler(machineID)
+{
+
+    window.location.href = 'machine.html#!/' + machineID;
+}
+
+
+
+
+
+
+function signOut()
+{
+    console.log('signing out...');
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        console.log('signing out')
+        firebase.auth().signOut();
+        console.log('signed out')
+        // [END signout]
+      } else {
+        console.log('not signed in')
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="errorModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+    <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+        </div>
+      <div class="modal-body">
+          <div class="text-center">
+            <div class="text-danger"><span class="modal-main-icon mdi mdi-close-circle-o"></span></div>
+            <h3 id="errorTitle">Something went wrong</h3>
+            <p id="errorDescription">You need at least one price on the machine.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+          <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="addNewSparkModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Select the type of Spark you want to add</h4>
+          <button type="button" class="close" data-dismiss="modal"
+          aria-hidden="true">×</button>
+          
+        </div>
+        <div class="modal-body">
+  
+
+
+
+          <div class="form-group row">
+            <label for="inputText3" class="col-12 col-lg-2 col-form-label text-sm-left">Spark Type</label>
+            <div class="col-12 col-sm-8 col-lg-6">
+              <select   id="customersDropDown" class="select2" tabindex="-1" aria-hidden="false">
+                <optgroup label="ShinePay Spark Type">
+                  <option value=1>LaundrySpark</option>
+                  <option value=2>PowerSpark</option>
+                  <!-- <option value=3>ChargeSpark</option> -->
+                  <option value=4>MechanicalSaprk</option>
+                  <!-- <option value=5>ParkingSpark</option>
+                  <option value=6>VendingSpark</option> -->
+
+                </optgroup>
+              </select>
+
+            </div>
+        </div>
+  
+                 
+        </div>
+        <div class="modal-footer">
+          
+          <button   class="button-transparent" data-dismiss="modal">Cancel</button>
+          <button  id="setNumberOfTotalUsesButton" onClick="sparkTypeDropDownHandler()" type="button" class="btn btn-success-shinepay modal-close" >Continue</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="removeStoreModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Confirm Deleting Location</h4>
+          <button type="button" class="close" data-dismiss="modal"
+          aria-hidden="true">×</button>
+          
+        </div>
+        <div class="modal-body">
+
+          <p>Are you sure you want to remove this location?</p>
+          <p>Please note that any machines atttached to this location will be removed from the system.</p>
+          
+                   
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button"  onClick="dismissSuccess()" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+          <button onClick="removeLocation()" type="button" class="btn btn-space btn-primary-right" >Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="SuccessModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+  <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+      </div>
+    <div class="modal-body">
+        <div class="text-center">
+          <div class="text-success"><span class="modal-main-icon mdi mdi-check"></span></div>
+          <h3>Success</h3>
+          <p id="successDescription">Success.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" data-dismiss="modal" class="btn btn-secondary">Ok</button>
+        <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Ok</button> -->
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="addVandalismReportModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Add Vandalism Report</h4>
+        <button type="button" class="close" data-dismiss="modal"
+        aria-hidden="true">×</button>
+        
+      </div>
+      <div class="modal-body">
+
+        <p>Please enter the vadalism report details</p>
+
+
+
+
+        <label class="col-12 col-sm-3 col-form-label text-sm-right">Vandalism Date </label>
+        <div class="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+          <div id="vandalismDatePicker" data-min-view="2" data-date-format="yyyy-mm-dd" class="input-group date datetimepicker">
+            <input  id="vandalismDateLabel"   size="16" type="text" value="" class="form-control">
+            <div class="input-group-append">
+              <button class="btn btn-primary"><i class="icon-th mdi mdi-calendar"></i></button>
+            </div>
+          </div>
+        </div>        
+
+
+
+
+
+            <div class="modal-body form">
+              <div class="form-group">
+                <label>Damage Amount</label>
+                <input id="DamageAmountTextField" placeholder="1250.51" class="form-control">
+      </div>
+      </div>
+
+
+
+            <div class="modal-body form">
+              <div class="form-group">
+                <label>Downtime (days)</label>
+                <input id="downtimeTextField" placeholder="10" class="form-control">
+      </div>
+      </div>
+
+
+      <div class="modal-body form">
+        <div class="form-group">
+          <label>Notes</label>
+          <input id="vandalismReportNotesTextField" placeholder="Two machines damaged" class="form-control">
+</div>
+</div>
+
+
+                 
+      </div>
+      <div class="modal-footer">
+        
+        
+
+        <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+        <button onClick="addVandlismReportToDatabase()" type="button" class="btn btn-space btn-primary-right" >Add Report</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="resetCoinCountModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Confirm Coin Count Reset</h4>
+        <button type="button" class="close" data-dismiss="modal"
+        aria-hidden="true">×</button>
+        
+      </div>
+      <div class="modal-body">
+
+        <p>Are you sure you want to reset the coin count(s)?</p>
+        <p>This will reset the coin count of all the machines at this location.</p>
+        
+                 
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button"  class="btn btn-secondary modal-close" data-dismiss="modal">Cancel</button>
+        <button onClick="resetCoinCountButtonHandler()" type="button" class="btn btn-space btn-primary-right" >Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Mirrored from shinepay.io/machinesbylocation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:16:53 GMT -->
+</html>

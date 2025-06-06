@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from shinepay.io/pos/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:17:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="George W. Melcer">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>ShinePoS</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body class="be-splash-screen">
+    <div class="be-wrapper be-login">
+      <div class="be-content">
+        <div class="main-content container-fluid">
+          <div class="splash-container">
+            <div class="card card-border-color card-border-color-primary">
+              <div class="card-header"><img src="assets/img/logo-xx.png" alt="logo" width="102" height="27" class="logo-img"><span class="splash-description">Please enter your user information.</span></div>
+              <div id="loadingCard" class="card-body  be-loading">
+                
+                <div class="form-group">
+                  <input id="username" type="text" placeholder="Username" autocomplete="off" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input id="password" type="password" placeholder="Password" class="form-control">
+                </div>
+
+                <div class="form-group login-submit">
+                  <button onclick="signIn()"  data-dismiss="modal" type="submit" class="btn btn-primary btn-xl">Sign in</button>
+                </div>
+                <div class="form-group row login-tools">
+
+                  <div class="col-8 login-forgot-password"><a href="forgotpassword.html">Forgot Password?</a></div>
+    
+                </div>
+              
+
+            <div class="be-spinner">
+              <center>
+            <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+              <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+            </svg>
+          </center>
+           </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+
+    <script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script>
+<script src="../../www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      	//initialize the javascript
+      	App.init();
+
+var signinButton = document.getElementById("password");
+signinButton.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+        signIn();
+    }
+});
+
+
+var userNameField = document.getElementById("username");
+userNameField.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+      if(userNameField.value != "")
+        signIn();
+        }
+});
+
+
+      });
+      
+  
+
+        /**
+         *  UI Elements
+         */
+
+         
+         
+         const emailTextField = document.getElementById('username');
+         const passwordTextField = document.getElementById('password');
+
+
+
+        /**
+         *  Actions
+         */
+    // const signup = () => {
+    //   let provider = new firebase.auth.FacebookAuthProvider();
+    //   auth.signInWithRedirect(provider).catch(handleError);
+    // };
+
+        const signout = () => {
+            auth.signOut();
+        };
+
+
+
+        
+        /**
+         *  Event Handlers
+         */
+    
+
+
+        function signIn() {
+        
+
+     if (firebase.auth().currentUser) {
+        // [START signout]
+        firebase.auth().signOut();
+        // [END signout]
+      } else {
+        console.log('got here')
+        //console.log(lo)
+        var email = emailTextField.value;
+        var password = passwordTextField.value;
+        console.log('email: ' + email)
+        console.log('password: ' + password)
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+        // Sign in with email and pass.
+        // [START authwithemail]
+        console.log('about to sign in')
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          console.log('got to sign in handler')
+
+        if(error)
+        {
+            // Handle Errors here.
+
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          //document.getElementById('quickstart-sign-in').disabled = false;
+        }
+        else
+        {
+            console.log('we got this')
+        }
+
+
+          
+        });
+        // [END authwithemail]
+      }
+      console.log('got here 2')
+      // document.getElementById('quickstart-sign-in').disabled = true;
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+function getPermissionObjForUser()
+{
+
+//  var userId = firebase.auth().currentUser.uid;
+     var email = firebase.auth().currentUser.email;
+firebase.database().ref('permission_attendant_flat').orderByChild('grantee_email').equalTo(email).on("value", function(snapshot) {
+  
+  var permissionOBJ  = snapshot.val();
+  console.log(permissionOBJ)
+  if(permissionOBJ)
+  {
+
+      console.log('has access');
+      window.location.href = 'customers.html';
+  }
+  else
+  {
+
+    //no permission OBJ found --user doesn't have access
+    console.log('no access');
+    signOut();
+  }
+
+
+
+
+});
+
+
+
+
+}
+
+
+
+
+
+
+function signOut()
+{
+    console.log('signing out...');
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        console.log('signing out')
+        firebase.auth().signOut();
+        console.log('signed out')
+        // [END signout]
+      } else {
+        console.log('not signed in')
+
+  }
+}
+
+
+
+
+
+
+//  registerBtn.click((event) => {
+        
+// console.log('register btn')
+//      if (firebase.auth().currentUser) {
+//         // [START signout]
+//         console.log('signing out')
+//         firebase.auth().signOut();
+//         console.log('signed out')
+//         // [END signout]
+//       } else {
+//         console.log('not signed in')
+
+
+
+
+
+//   }
+      
+      // document.getElementById('quickstart-sign-in').disabled = true;
+
+
+
+
+
+
+
+
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $logoutBtn.click(signout);
+
+        // $authcodeBtn.click((event) => {
+        //  event.preventDefault();
+        //  $authcodeBtn.hide();
+        //  $loadingIndicator.show();
+        //  sendAlexaToken().then((code) => {
+        //      $authcode.text(code);
+        //      $authcodeBtn.show();
+        //      $loadingIndicator.hide();
+        //      $authcode.show();
+        //      $authorizationContainer.show();
+        //  });
+        // });
+
+        // $authorizeAlexaBtn.click((event) => {
+        //  event.preventDefault();
+
+        //  const code = $authcodeInput.val();
+        //  const client_id = getUrlParameter('client_id');
+        //  const response_type = getUrlParameter('response_type');
+        //  const state = getUrlParameter('state');
+
+        //  if (code) {
+        //          window.location = `/prod/authorize/commit-code?client_id=${client_id}&response_type=${response_type}&state=${state}&code=${code}`;
+        //  } else {
+        //          firebase.auth().currentUser.getToken(true).then(token => {
+        //                  window.location = `/prod/authorize/commit?token=${token}&client_id=${client_id}&response_type=${response_type}&state=${state}`;
+        //          }).catch(error => {
+        //                  alert(`something went wrong: ${error.message}`)
+        //          });
+        //  }
+        // });
+
+        /**
+         *  Initialization
+         */
+        //$loadingIndicator.hide();
+        //$authorizationContainer.hide();
+
+
+
+
+
+        // Initialize Firebase
+         var config = {
+    apiKey: "AIzaSyBKY2Xlnv7QIyZZba1O5QIkOxkNotbTI9Y",
+    authDomain: "shinedevserver.firebaseapp.com",
+    databaseURL: "https://shinedevserver.firebaseio.com",
+    projectId: "shinedevserver",
+    storageBucket: "shinedevserver.appspot.com",
+    messagingSenderId: "22894819152"
+  };
+
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        
+
+        auth.onAuthStateChanged((authData) => {
+            if (authData) {
+                console.log('Logged in')
+                //firebase.auth().signOut();
+                var card = document.getElementById('loadingCard');
+                card.setAttribute('class' , 'main-content container-fluid be-loading-active');
+                 window.location.href = 'customers.html';
+                
+                
+
+
+
+
+
+
+
+               // $loginFormContainer.hide();
+                // $homeContainer.show();
+                // $homeContainer.find('.username').text(authData.displayName);
+            } else {
+                console.log('Logged out')
+               // $loginFormContainer.show();
+                // $homeContainer.hide();
+
+            }
+        });
+
+        /**
+        //  *  Helpers
+        //  */
+        // const getUrlParameter = (sParam) => {
+        //     let sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        //         sURLVariables = sPageURL.split('&'),
+        //         sParameterName,
+        //         i;
+        //     for (i = 0; i < sURLVariables.length; i++) {
+        //         sParameterName = sURLVariables[i].split('=');
+
+        //         if (sParameterName[0] === sParam) {
+        //             return sParameterName[1] === undefined ? true : sParameterName[1];
+        //         }
+        //     }
+        // };
+
+        const handleError = (error) => {
+            if (error && error.message) {
+                $errorMessage.text(`Error: ${error.message}`);
+            }
+        };
+
+
+
+    </script>
+  </body>
+
+<!-- Mirrored from shinepay.io/pos/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 09:17:29 GMT -->
+</html>
